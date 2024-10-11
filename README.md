@@ -1,4 +1,4 @@
-# COFFA: A Co-Designed Framework for Fused-Grained Reconfigurable Architecture towards Efficient Irregular Loop Handling
+# COFFA: A Co-Design Framework for Fused-Grained Reconfigurable Architecture towards Efficient Irregular Loop Handling
 
 ## Key Futures
 

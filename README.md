@@ -13,4 +13,4 @@ COFFA is an open-source framework for a hybrid system with a RISC-V core and a f
 All the source codes will be available upon publication.
 
 ## Example flow
-![demo.png](https://github.com/Dai-dirk/COFFA/demo.png)
+![demo.png](https://github.com/Dai-dirk/COFFA/blob/main/demo.png)

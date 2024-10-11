@@ -1,0 +1,3 @@
+void* fgra_din_addr[3] = {m_GaussianKernel, uniformH, uniformV};
+void* fgra_dout_addr[2] = {m_DispV, m_DispH};
+fgra_execute(fgra_din_addr, fgra_dout_addr);

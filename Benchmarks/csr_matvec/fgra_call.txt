@@ -1,0 +1,3 @@
+void* fgra_din_addr[6] = {A_data, A_i, A_j, B_i, x_data, y_data};
+void* fgra_dout_addr[1] = {y_data};
+fgra_execute(fgra_din_addr, fgra_dout_addr);

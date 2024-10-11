@@ -1,0 +1,615 @@
+{
+  "name": "G",
+  "directed": true,
+  "strict": false,
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "ADD2",
+      "label": "\\N",
+      "opcode": "ADD"
+    },
+    {
+      "_gvid": 1,
+      "name": "MUL7",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 2,
+      "name": "Output9",
+      "label": "\\N",
+      "offset": "0, 0",
+      "opcode": "Output",
+      "pattern": "0, 11, 0, 11, 16, 256",
+      "ref_name": "m_DispH",
+      "size": "4084"
+    },
+    {
+      "_gvid": 3,
+      "name": "MUL10",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 4,
+      "name": "Output12",
+      "label": "\\N",
+      "offset": "0, 0",
+      "opcode": "Output",
+      "pattern": "0, 11, 0, 11, 16, 256",
+      "ref_name": "m_DispV",
+      "size": "4084"
+    },
+    {
+      "_gvid": 5,
+      "name": "ADD19",
+      "label": "\\N",
+      "opcode": "ADD"
+    },
+    {
+      "_gvid": 6,
+      "name": "ULT20",
+      "label": "\\N",
+      "opcode": "ULT"
+    },
+    {
+      "_gvid": 7,
+      "name": "ADD30",
+      "label": "\\N",
+      "opcode": "ADD"
+    },
+    {
+      "_gvid": 8,
+      "name": "ULT31",
+      "label": "\\N",
+      "opcode": "ULT"
+    },
+    {
+      "_gvid": 9,
+      "name": "OR32",
+      "label": "\\N",
+      "opcode": "OR"
+    },
+    {
+      "_gvid": 10,
+      "name": "Input37",
+      "label": "\\N",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "64, 11, -636, 11, -680, 256",
+      "ref_name": "m_GaussianKernel",
+      "size": "684"
+    },
+    {
+      "_gvid": 11,
+      "name": "MUL38",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 12,
+      "name": "MUL40",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 13,
+      "name": "CInput48",
+      "label": "\\N",
+      "offset": "0, -100",
+      "opcode": "CInput",
+      "pattern": "16, 11, -156.000000, 11, -184, 256",
+      "ref_name": "uniformH",
+      "size": "4184"
+    },
+    {
+      "_gvid": 14,
+      "name": "CInput50",
+      "label": "\\N",
+      "offset": "0, -100",
+      "opcode": "CInput",
+      "pattern": "16, 11, -156.000000, 11, -184, 256",
+      "ref_name": "uniformV",
+      "size": "4184"
+    },
+    {
+      "_gvid": 15,
+      "name": "CONST52",
+      "label": "CONST52, Const=-5",
+      "opcode": "CONST",
+      "value": "-5"
+    },
+    {
+      "_gvid": 16,
+      "name": "CONST54",
+      "label": "CONST54, Const=15",
+      "opcode": "CONST",
+      "value": "15"
+    },
+    {
+      "_gvid": 17,
+      "name": "CONST55",
+      "label": "CONST55, Const=15",
+      "opcode": "CONST",
+      "value": "15"
+    },
+    {
+      "_gvid": 18,
+      "name": "CONST56",
+      "label": "CONST56, Const=1",
+      "opcode": "CONST",
+      "value": "1"
+    },
+    {
+      "_gvid": 19,
+      "name": "CONST58",
+      "label": "CONST58, Const=-5",
+      "opcode": "CONST",
+      "value": "-5"
+    },
+    {
+      "_gvid": 20,
+      "name": "CONST59",
+      "label": "CONST59, Const=3",
+      "opcode": "CONST",
+      "value": "3"
+    },
+    {
+      "_gvid": 21,
+      "name": "CONST60",
+      "label": "CONST60, Const=1",
+      "opcode": "CONST",
+      "value": "1"
+    },
+    {
+      "_gvid": 22,
+      "name": "CONST62",
+      "label": "CONST62, Const=255",
+      "opcode": "CONST",
+      "value": "255"
+    },
+    {
+      "_gvid": 23,
+      "name": "CONST63",
+      "label": "CONST63, Const=1",
+      "opcode": "CONST",
+      "value": "1"
+    },
+    {
+      "_gvid": 24,
+      "name": "NOT68",
+      "label": "\\N",
+      "opcode": "NOT"
+    },
+    {
+      "_gvid": 25,
+      "name": "ACC72",
+      "acc_first": "0",
+      "acc_params": "0, 256, 121, 1",
+      "label": "\\N",
+      "opcode": "ACC"
+    },
+    {
+      "_gvid": 26,
+      "name": "ACC76",
+      "acc_first": "1",
+      "acc_params": "0, 121, 1, 256",
+      "label": "\\N",
+      "opcode": "ACC"
+    },
+    {
+      "_gvid": 27,
+      "name": "ACC78",
+      "acc_first": "1",
+      "acc_params": "0, 121, 1, 256",
+      "label": "\\N",
+      "opcode": "ACC"
+    },
+    {
+      "_gvid": 28,
+      "name": "ACC80",
+      "acc_first": "0",
+      "acc_params": "0, 11, 11, 256",
+      "label": "\\N",
+      "opcode": "ACC"
+    },
+    {
+      "_gvid": 29,
+      "name": "ACC86",
+      "acc_first": "0",
+      "acc_params": "0, 11, 1, 2816",
+      "label": "\\N",
+      "opcode": "ACC"
+    },
+    {
+      "_gvid": 30,
+      "name": "CONST87",
+      "label": "CONST87, Const=0",
+      "opcode": "CONST",
+      "value": "0"
+    },
+    {
+      "_gvid": 31,
+      "name": "SEL88",
+      "label": "\\N",
+      "opcode": "SEL"
+    },
+    {
+      "_gvid": 32,
+      "name": "CONST89",
+      "label": "CONST89, Const=0",
+      "opcode": "CONST",
+      "value": "0"
+    },
+    {
+      "_gvid": 33,
+      "name": "SEL90",
+      "label": "\\N",
+      "opcode": "SEL"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 7,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 1,
+      "tail": 1,
+      "head": 2,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 2,
+      "tail": 3,
+      "head": 4,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 3,
+      "tail": 5,
+      "head": 6,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 4,
+      "tail": 6,
+      "head": 9,
+      "Width": "1",
+      "color": "red",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 5,
+      "tail": 7,
+      "head": 8,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 6,
+      "tail": 8,
+      "head": 9,
+      "Width": "1",
+      "color": "red",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 7,
+      "tail": 9,
+      "head": 24,
+      "Width": "1",
+      "color": "red",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 8,
+      "tail": 9,
+      "head": 31,
+      "Width": "1",
+      "color": "red",
+      "label": "Op=2",
+      "operand": "2",
+      "style": "bold"
+    },
+    {
+      "_gvid": 9,
+      "tail": 9,
+      "head": 33,
+      "Width": "1",
+      "color": "red",
+      "label": "Op=2",
+      "operand": "2",
+      "style": "bold"
+    },
+    {
+      "_gvid": 10,
+      "tail": 10,
+      "head": 11,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 11,
+      "tail": 10,
+      "head": 12,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 12,
+      "tail": 11,
+      "head": 26,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 13,
+      "tail": 12,
+      "head": 27,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 14,
+      "tail": 13,
+      "head": 33,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 15,
+      "tail": 14,
+      "head": 31,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 16,
+      "tail": 15,
+      "head": 0,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 17,
+      "tail": 16,
+      "head": 1,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 18,
+      "tail": 17,
+      "head": 3,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 19,
+      "tail": 18,
+      "head": 25,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 20,
+      "tail": 19,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 21,
+      "tail": 20,
+      "head": 6,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 22,
+      "tail": 21,
+      "head": 28,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 23,
+      "tail": 22,
+      "head": 8,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 24,
+      "tail": 23,
+      "head": 29,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 25,
+      "tail": 24,
+      "head": 13,
+      "Width": "1",
+      "color": "red",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 26,
+      "tail": 24,
+      "head": 14,
+      "Width": "1",
+      "color": "red",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 27,
+      "tail": 25,
+      "head": 0,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 28,
+      "tail": 26,
+      "head": 1,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 29,
+      "tail": 27,
+      "head": 3,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 30,
+      "tail": 28,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 31,
+      "tail": 29,
+      "head": 7,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 32,
+      "tail": 30,
+      "head": 31,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 33,
+      "tail": 31,
+      "head": 12,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 34,
+      "tail": 32,
+      "head": 33,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 35,
+      "tail": 33,
+      "head": 11,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    }
+  ]
+}

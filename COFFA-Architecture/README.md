@@ -16,7 +16,7 @@ RISC-V + FGRA modeling and generation with Chisel.
 ### Source codes
 **./src/main/scala:** the source codes of FGRA and other control modules
 
-**./src/main/scala/soc/COFFA.scala:** the top file
+**./src/main/scala/soc/Fusion.scala:** the top file
 
 **./src/main/scala/dsa/:** the source codes of the FGRA array, including FPE, FGIB, and IOB.     
 

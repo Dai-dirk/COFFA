@@ -1,0 +1,263 @@
+{
+  "name": "G",
+  "directed": true,
+  "strict": false,
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "Input8",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "4, 31, 8, 32",
+      "ref_name": "X",
+      "size": "4096"
+    },
+    {
+      "_gvid": 1,
+      "name": "Input11",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 4",
+      "opcode": "Input",
+      "pattern": "4, 31, 8, 32",
+      "ref_name": "X",
+      "size": "4096"
+    },
+    {
+      "_gvid": 2,
+      "name": "Input13",
+      "label": "\\N",
+      "multiport": "0",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "4, 31, 8, 32",
+      "ref_name": "A",
+      "size": "4092"
+    },
+    {
+      "_gvid": 3,
+      "name": "Input15",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 4",
+      "opcode": "Input",
+      "pattern": "4, 31, 8, 32",
+      "ref_name": "B",
+      "size": "4096"
+    },
+    {
+      "_gvid": 4,
+      "name": "MUL16",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 5,
+      "name": "MUL17",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 6,
+      "name": "SUB18",
+      "label": "\\N",
+      "opcode": "SUB"
+    },
+    {
+      "_gvid": 7,
+      "name": "Output19",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Output",
+      "pattern": "4, 31, 8, 32",
+      "ref_name": "X",
+      "size": "4096"
+    },
+    {
+      "_gvid": 8,
+      "name": "Input21",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "4, 31, 8, 32",
+      "ref_name": "B",
+      "size": "4096"
+    },
+    {
+      "_gvid": 9,
+      "name": "MUL22",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 10,
+      "name": "MUL23",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 11,
+      "name": "SUB24",
+      "label": "\\N",
+      "opcode": "SUB"
+    },
+    {
+      "_gvid": 12,
+      "name": "Output25",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Output",
+      "pattern": "4, 31, 8, 32",
+      "ref_name": "B",
+      "size": "4096"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 6,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 1,
+      "tail": 1,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 2,
+      "tail": 2,
+      "head": 4,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 3,
+      "tail": 2,
+      "head": 9,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 4,
+      "tail": 2,
+      "head": 10,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 5,
+      "tail": 3,
+      "head": 4,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 6,
+      "tail": 3,
+      "head": 9,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 7,
+      "tail": 4,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 8,
+      "tail": 5,
+      "head": 6,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 9,
+      "tail": 6,
+      "head": 7,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 10,
+      "tail": 8,
+      "head": 11,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 11,
+      "tail": 9,
+      "head": 10,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 12,
+      "tail": 10,
+      "head": 11,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 13,
+      "tail": 11,
+      "head": 12,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    }
+  ]
+}

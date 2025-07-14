@@ -1,0 +1,326 @@
+package fgramem
+
+import chisel3._
+import chisel3.util._
+import freechips.rocketchip.tile._
+import org.chipsalliance.cde.config._
+import freechips.rocketchip.rocket._
+import fgramemISA._
+
+/** Reservation Station
+  * @param cmdQueDepth    command queue depth
+  * @param loadQueDepth   load queue depth
+  * @param storeQueDepth  store queue depth
+  * @param exeQueDepth    execute queue depth
+  * @param idWidth        width of the command ID
+  */
+
+class CoreReq(idWidth: Int)(implicit p: Parameters) extends Bundle {
+  val cmd = new RoCCCommand
+  val id = UInt(idWidth.W)
+}
+
+class CoreResp(idWidth: Int)(implicit p: Parameters) extends Bundle {
+  val success = Bool()
+  val id = UInt(idWidth.W)
+}
+
+class CoreIF(idWidth: Int)(implicit p: Parameters) extends Bundle {
+  val req = Flipped(Decoupled(new CoreReq(idWidth)))
+  val resp = Decoupled(new CoreResp(idWidth))
+}
+
+object Tool {
+    class UDValid[T <: Data](t: T) extends Bundle {
+        val valid = Bool()
+        val bits = t.cloneType
+
+        def push(b: T): Unit = {
+            valid := true.B
+            bits := b
+        }
+
+        def pop(dummy: Int = 0): T = {
+            valid := false.B
+            bits
+        }
+    }
+
+    object UDValid {
+        def apply[T <: Data](t: T): UDValid[T] = new UDValid(t)
+    }
+}
+
+class ReservationStationOoO(cmdQueDepth: Int, loadQueDepth: Int, storeQueDepth: Int, exeQueDepth: Int,
+                    nBanks: Int, lgSizeBank: Int, idWidth: Int)
+                    (implicit p: Parameters) extends CoreModule {
+    val io = IO (new Bundle {
+        val cmd = Flipped(Decoupled(new RoCCCommand))
+        val resp = Decoupled(new RoCCResponse)
+        val ld = Flipped(new CoreIF(idWidth))
+        val st = Flipped(new CoreIF(idWidth))
+        val ex = Flipped(new CoreIF(idWidth))
+        val busy = Output(Bool())
+        val flush = Output(Bool())
+    })
+
+    val cmd_que = Module(new Queue(new RoCCCommand, cmdQueDepth))
+    cmd_que.io.enq <> io.cmd
+    
+    val instructions_count = RegInit(0.U(32.W))
+    when (cmd_que.io.deq.fire){
+        instructions_count := instructions_count + 1.U
+    }
+    dontTouch(instructions_count)
+
+    class LoadEntry extends Bundle {
+        val req = new CoreReq(idWidth)
+        val count = UInt(instructions_count.getWidth.W)
+        val deps = Bool()
+        val earliest = Bool()
+        val load_cfg = Bool()
+        val spad_addr = UInt(LOAD_CMD_RS2_SPAD_ADDR_WIDTH.W)
+    }
+
+    class StoreEntry extends Bundle {
+        val req = new CoreReq(idWidth)
+        val count = UInt(instructions_count.getWidth.W)
+        val deps = Bool()
+        val earliest = Bool()
+        val spad_addr = UInt(LOAD_CMD_RS2_SPAD_ADDR_WIDTH.W)
+    }
+
+    class ExecuteEntry extends Bundle {
+        val req = new CoreReq(idWidth)
+        val count = UInt(instructions_count.getWidth.W)
+        val deps = Bool()
+        val earliest = Bool()
+        val execution = Bool() // Truth refers to execution command, False refers to config command
+        val cfg_addr = UInt(CFG_CMD_RS2_BASE_ADDR_WIDTH.W)
+    }
+
+    class ScoreBoardEntry extends Bundle { //This is used to record all the load data instructions before execution command
+        val spad_addr = UInt(LOAD_CMD_RS2_SPAD_ADDR_WIDTH.W)
+        val count = UInt(instructions_count.getWidth.W)
+    }
+
+    class Reqwithaddr extends Bundle {
+        val req = new CoreReq(idWidth)
+        val spad_addr = UInt(LOAD_CMD_RS2_SPAD_ADDR_WIDTH.W)
+        val cfg_addr = UInt(CFG_CMD_RS2_BASE_ADDR_WIDTH.W)
+    }
+
+    val ld_que = Reg(Vec(loadQueDepth, Tool.UDValid(new LoadEntry)))
+    val scb_que = Reg(Vec(loadQueDepth, Tool.UDValid(new ScoreBoardEntry)))
+    val st_que = Reg(Vec(storeQueDepth, Tool.UDValid(new StoreEntry)))
+    val ex_que = Reg(Vec(exeQueDepth, Tool.UDValid(new ExecuteEntry)))
+    val ld_empty = !ld_que.map(_.valid).reduce(_ || _)
+    val ld_full = ld_que.map(_.valid).reduce(_ && _)
+    val ex_empty = !ex_que.map(_.valid).reduce(_ || _)
+    val ex_full = ex_que.map(_.valid).reduce(_ && _)
+    val st_empty = !st_que.map(_.valid).reduce(_ || _)
+    val st_full = st_que.map(_.valid).reduce(_ && _)
+
+    val s_idle :: s_issue :: s_fence :: s_flush :: Nil = Enum(4)
+    val state = RegInit(s_idle)
+    val funct = cmd_que.io.deq.bits.inst.funct
+    val isLoadCmd = (funct === LOAD_CMD)
+    val isExeCmd = (funct === CFG_CMD || funct === EXE_CMD)
+    val isStoreCmd = (funct === STORE_CMD)
+    val isFlushCmd = (funct === FLUSH_CMD)
+    val isFenceCmd = (funct === FENCE_CMD)
+    val task_id = cmd_que.io.deq.bits.rs2(63, 64-TASK_ID_WIDTH)
+    val spad_addr = cmd_que.io.deq.bits.rs2.asTypeOf(new StoreRs2).spad_addr //It works because the structures of rs2 for load & store in fusion are the same
+//    val cfg_base_addr = cmd_que.io.deq.bits.rs2.asTypeOf(new CgraCfgRs2).cfg_base_addr
+    val cfg_addr_param = (nBanks << lgSizeBank).asUInt //I am not sure how to get the address of the config bank. This solution is correct in the case that there is one config bank
+    val cmd_que_deq_ready = RegInit(false.B)
+    val entry = Reg(new Reqwithaddr)
+    val ex_count = RegInit(0.U(32.W))
+    val flush = RegInit(false.B)
+    val req_rd = Reg(chiselTypeOf(io.resp.bits.rd))
+    val req_xd = RegInit(false.B)
+
+    io.flush := flush
+    cmd_que.io.deq.ready := cmd_que_deq_ready
+
+    switch(state) {
+        is(s_idle) {
+            when(cmd_que.io.deq.valid){
+                when(isFlushCmd) {
+                    state := s_flush
+                    req_rd := cmd_que.io.deq.bits.inst.rd
+                    cmd_que_deq_ready := true.B
+                    flush := true.B
+                }.elsewhen(isFenceCmd && ld_empty && st_empty && ex_empty) {
+                    state := s_fence
+                    req_rd := cmd_que.io.deq.bits.inst.rd
+                    req_xd := cmd_que.io.deq.bits.inst.xd
+                    cmd_que_deq_ready := true.B
+                }.elsewhen(isLoadCmd && !ld_full) {
+                    state := s_issue
+                    cmd_que_deq_ready := true.B
+                }.elsewhen(isExeCmd && !ex_full) {
+                    state := s_issue
+                    cmd_que_deq_ready := true.B
+                }.elsewhen(isStoreCmd && !st_full){
+                    state := s_issue
+                    cmd_que_deq_ready := true.B
+                } 
+            }
+        }
+        is(s_issue){
+            cmd_que_deq_ready := false.B
+            state := s_idle
+        }
+        is(s_fence){
+            cmd_que_deq_ready := false.B 
+            when(!req_xd || io.resp.ready){
+                state := s_idle
+            }
+        }
+        is(s_flush){
+            cmd_que_deq_ready := false.B 
+            when(io.resp.ready){
+                state := s_idle
+                flush := false.B
+            }
+        }
+    }
+
+    when(state === s_idle){
+        entry.req.cmd := cmd_que.io.deq.bits
+        entry.req.id := task_id
+        entry.spad_addr := spad_addr
+//        entry.cfg_addr := cfg_base_addr + cfg_addr_param
+    }
+
+    val ld_location = MuxCase((loadQueDepth-1).U, ld_que.zipWithIndex.map { case (e, i) => !e.valid -> i.U })
+    val scb_location = MuxCase((loadQueDepth-1).U, scb_que.zipWithIndex.map { case (e, i) => !e.valid -> i.U })
+    val st_location = MuxCase((storeQueDepth-1).U, st_que.zipWithIndex.map { case (e, i) => !e.valid -> i.U })
+    val ex_location = MuxCase((exeQueDepth-1).U, ex_que.zipWithIndex.map { case (e, i) => !e.valid -> i.U })
+
+    when (cmd_que.io.deq.fire && isLoadCmd){
+        ld_que(ld_location).valid := true.B
+        ld_que(ld_location).bits.req := entry.req
+        ld_que(ld_location).bits.spad_addr := entry.spad_addr
+        ld_que(ld_location).bits.load_cfg := entry.spad_addr >= cfg_addr_param
+        ld_que(ld_location).bits.count := instructions_count 
+    }
+
+    when (cmd_que.io.deq.fire && isStoreCmd){
+        st_que(st_location).valid := true.B
+        st_que(st_location).bits.req := entry.req
+        st_que(st_location).bits.spad_addr := entry.spad_addr
+        st_que(st_location).bits.count := instructions_count 
+    }
+
+    when (cmd_que.io.deq.fire && isExeCmd){
+        ex_que(ex_location).valid := true.B
+        ex_que(ex_location).bits.req := entry.req
+        ex_que(ex_location).bits.execution := (funct === EXE_CMD) // There might be sequential problems
+//        ex_que(ex_location).bits.cfg_addr := entry.cfg_addr
+        ex_que(ex_location).bits.count := instructions_count 
+    }
+
+    ld_que.foreach { case (ld_e) =>
+        val ld_after_st = st_que.map(st_e => st_e.valid && (st_e.bits.count < ld_e.bits.count) && (st_e.bits.spad_addr === ld_e.bits.spad_addr)).reduce(_ || _) 
+        val ld_after_ex = (!ld_e.bits.load_cfg) && 
+                          (ex_que.map(ex_e => ex_e.valid && (ex_e.bits.count < ld_e.bits.count) && ex_e.bits.execution).reduce(_ || _)) &&
+                          (scb_que.map(scb_e => scb_e.valid && (scb_e.bits.count < ld_e.bits.count) && (scb_e.bits.spad_addr === ld_e.bits.spad_addr)).reduce(_ || _))
+        val ld_after_cfg = (ld_e.bits.load_cfg) && 
+                          (ex_que.map(ex_e => ex_e.valid && (ex_e.bits.count < ld_e.bits.count) && !ex_e.bits.execution).reduce(_ || _))
+        ld_e.bits.deps := ld_after_st | ld_after_ex | ld_after_cfg | !ld_e.valid //The !ld_e.valid promises when the entry is not valid, its deps is high, to adjust the original sequential mistake
+        ld_e.bits.earliest := ld_que.map(e => (!e.valid) || (ld_e.bits.count <= e.bits.count)).reduce(_ && _)
+    }
+
+    st_que.foreach { case (st_e) =>
+        val st_after_ld = ld_que.map(ld_e => ld_e.valid && (ld_e.bits.count < st_e.bits.count) && (ld_e.bits.spad_addr === st_e.bits.spad_addr)).reduce(_ || _)
+        val st_after_ex = ex_que.map(ex_e => ex_e.valid && (ex_e.bits.count < st_e.bits.count)).reduce(_ || _)
+        st_e.bits.deps := st_after_ld | st_after_ex | !st_e.valid
+        st_e.bits.earliest := st_que.map(e => (!e.valid) || (st_e.bits.count <= e.bits.count)).reduce(_ && _)
+    }
+
+    ex_que.foreach { case (ex_e) =>
+        val ex_after_ld = ex_e.bits.execution && 
+                          ld_que.map(ld_e => ld_e.valid && (ld_e.bits.count < ex_e.bits.count) && (!ld_e.bits.load_cfg)).reduce(_ || _)
+        val cfg_after_ld = !ex_e.bits.execution && 
+                          ld_que.map(ld_e => ld_e.valid && (ld_e.bits.count < ex_e.bits.count) && (ld_e.bits.load_cfg)).reduce(_ || _)
+        val ex_after_st = ex_e.bits.execution &&
+                          st_que.map(st_e => st_e.valid && (st_e.bits.count < ex_e.bits.count)).reduce(_ || _) //may not be necessary
+        ex_e.bits.deps := ex_after_ld | ex_after_st | !ex_e.valid | cfg_after_ld
+        ex_e.bits.earliest := ex_que.map(e => (!e.valid) || (ex_e.bits.count <= e.bits.count)).reduce(_ && _)
+    }
+
+    //for the load command to issue
+    val ld_issue_valids = ld_que.map(e => e.valid && e.bits.earliest && !e.bits.deps)
+    val ld_issue_sel = PriorityEncoderOH(ld_issue_valids)
+    val ld_issue_id = OHToUInt(ld_issue_sel)
+    val ld_issue_req = Mux1H(ld_issue_sel, ld_que)
+    val ld_permitted = RegInit(true.B)
+
+    io.ld.req.valid := ld_issue_valids.reduce(_ || _) && ld_permitted
+    io.ld.req.bits := ld_issue_req.bits.req
+    io.ld.resp.ready := true.B
+
+    when(io.ld.req.fire){
+        ld_permitted := false.B
+        scb_que(scb_location).valid := true.B && !ld_que(ld_issue_id).bits.load_cfg
+        scb_que(scb_location).bits.spad_addr := ld_issue_req.bits.spad_addr
+        scb_que(scb_location).bits.count := ld_issue_req.bits.count
+    }
+
+    when(io.ld.resp.fire){
+        ld_permitted := true.B
+        ld_que(ld_issue_id).valid := false.B
+    }
+
+    //for the store command to issue
+    val st_issue_valids = st_que.map(e => e.valid && e.bits.earliest && !e.bits.deps)
+    val st_issue_sel = PriorityEncoderOH(st_issue_valids)
+    val st_issue_id = OHToUInt(st_issue_sel)
+    val st_issue_req = Mux1H(st_issue_sel, st_que)
+    val st_permitted = RegInit(true.B)
+
+    io.st.req.valid := st_issue_valids.reduce(_ || _) && st_permitted
+    io.st.req.bits := st_issue_req.bits.req
+    io.st.resp.ready := true.B
+
+    when(io.st.req.fire){
+        st_permitted := false.B
+    }
+
+    when(io.st.resp.fire){
+        st_permitted := true.B
+        st_que(st_issue_id).valid := false.B
+    }
+
+    //for the Exe command to issue
+    val ex_issue_valids = ex_que.map(e => e.valid && e.bits.earliest && !e.bits.deps)
+    val ex_issue_sel = PriorityEncoderOH(ex_issue_valids)
+    val ex_issue_id = OHToUInt(ex_issue_sel)
+    val ex_issue_req = Mux1H(ex_issue_sel, ex_que)
+    val ex_permitted = RegInit(true.B)
+
+    io.ex.req.valid := ex_issue_valids.reduce(_ || _) && ex_permitted
+    io.ex.req.bits := ex_issue_req.bits.req
+    io.ex.resp.ready := true.B
+
+    when(io.ex.req.fire){
+        ex_permitted := false.B
+        ex_count := ex_issue_req.bits.count
+    }
+
+    when(io.ex.resp.fire){
+        ex_permitted := true.B
+        ex_que(ex_issue_id).valid := false.B
+        scb_que.foreach{e => 
+//            if((e.bits.count <= ex_count).B) {e.valid := false.B}
+            e.valid := e.valid && (e.bits.count > ex_count)
+        }
+    }
+
+    io.busy := !cmd_que.io.enq.ready
+    io.resp.valid := (state === s_flush) || (state === s_fence && req_xd)
+    io.resp.bits.rd := req_rd
+    io.resp.bits.data := 1.U
+}

@@ -1,4 +1,4 @@
-# COFFA: A Co-Design Framework for Fused-Grained Reconfigurable Architecture towards Efficient Irregular Loop Handling
+# COFFA: A Co-Designed Framework for Fused-Grained Reconfigurable Architecture towards Efficient Irregular Loop Handling (Updating)
 
 ## Key Futures
 
@@ -6,15 +6,24 @@ COFFA is an open-source framework for a hybrid system with a RISC-V core and a f
 
 
 ## File catalog:
-    
-**Benchmark:** The eight benchmarks used in the paper.
+
+**COFFA-Architecture:** The FGRA + RISC-V SoC modeling by Chisel.
+    
+**COFFA-Compiler:** The COFFA-Compiler includes 1) an LLVM-based front-end tool for CDFG generation and 2) a back-end tool for CDFG to FGRA mapping.
+    
+**FGRA-BO-DSE:** The BO-based DSE process for FGRA.
+    
+**Benchmark:** The irregular or memory-intensive benchmarks used in the paper.
+    
+**Generated_Arch:** The FGRA specification file (which describes the design parameters) and generated ADFs.
+    
+**Scripts:** The scripts for running different flows within Chipyard. 
 
 
-All the source codes will be available upon publication (coming soon).
+All folders contain README files with introductions; the detailed manual will be released soon.
 
 ## Demo:
-
-The demo of the COFFA FPGA prototype is available at [Demo](https://youtu.be/9Y9i-jm0xQY?si=cCk1B8UQJmg_zFQZ). Special thanks to Rachel🐷 for her contributions to this video!
+The Demo of the COFFA FPGA prototype is available at [Demo](https://youtu.be/9Y9i-jm0xQY?si=cCk1B8UQJmg_zFQZ). Special thanks to Rachel🐷 for her contributions to this video!
 
 ## Example flow
 ![demo.png](https://github.com/Dai-dirk/COFFA/blob/main/demo.png)

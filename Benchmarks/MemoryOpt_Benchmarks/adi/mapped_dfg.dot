@@ -1,0 +1,30 @@
+Digraph G {
+edge [colorscheme=paired12];
+"Input8"[label = "\N\nlat=2"];
+"Input11"[label = "\N\nlat=2"];
+"Input13"[label = "\N\nlat=2"];
+"Input15"[label = "\N\nlat=2"];
+"MUL16"[label = "\N\nlat=3"];
+"Input15"->"MUL16"[weight = 4, color = 9, label ="lat = 0\nRDU = 0\nlogiclat=0\nop=0"];
+"Input13"->"MUL16"[weight = 4, color = 9, label ="lat = 0\nRDU = 0\nlogiclat=0\nop=1"];
+"MUL17"[label = "\N\nlat=4"];
+"MUL16"->"MUL17"[weight = 4, color = 9, label ="lat = 0\nRDU = 0\nlogiclat=0\nop=0"];
+"Input11"->"MUL17"[weight = 4, color = 9, label ="lat = 1\nRDU = 0\nlogiclat=0\nop=1"];
+"SUB18"[label = "\N\nlat=5"];
+"Input8"->"SUB18"[weight = 4, color = 9, label ="lat = 0\nRDU = 2\nlogiclat=0\nop=0"];
+"MUL17"->"SUB18"[weight = 4, color = 9, label ="lat = 0\nRDU = 0\nlogiclat=0\nop=1"];
+"Output19"[label = "\N\nlat=7"];
+"SUB18"->"Output19"[weight = 4, color = 9, label ="lat = 1\nRDU = 1\nlogiclat=0\nop=0"];
+"Input21"[label = "\N\nlat=2"];
+"MUL22"[label = "\N\nlat=3"];
+"Input15"->"MUL22"[weight = 4, color = 9, label ="lat = 0\nRDU = 0\nlogiclat=0\nop=0"];
+"Input13"->"MUL22"[weight = 4, color = 9, label ="lat = 0\nRDU = 0\nlogiclat=0\nop=1"];
+"MUL23"[label = "\N\nlat=4"];
+"MUL22"->"MUL23"[weight = 4, color = 9, label ="lat = 0\nRDU = 0\nlogiclat=0\nop=0"];
+"Input13"->"MUL23"[weight = 4, color = 9, label ="lat = 1\nRDU = 0\nlogiclat=0\nop=1"];
+"SUB24"[label = "\N\nlat=5"];
+"Input21"->"SUB24"[weight = 4, color = 9, label ="lat = 1\nRDU = 1\nlogiclat=0\nop=0"];
+"MUL23"->"SUB24"[weight = 4, color = 9, label ="lat = 0\nRDU = 0\nlogiclat=0\nop=1"];
+"Output25"[label = "\N\nlat=7"];
+"SUB24"->"Output25"[weight = 4, color = 9, label ="lat = 1\nRDU = 1\nlogiclat=0\nop=0"];
+}

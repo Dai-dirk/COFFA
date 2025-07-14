@@ -1,0 +1,37 @@
+Digraph G {
+Input3[opcode=Input, ref_name="A", size="3984", offset="112, 4", pattern="0, 32, 128, 32", multiport=1];
+Input5[opcode=Input, ref_name="A", size="3984", offset="112, 0", pattern="0, 32, 128, 32", multiport=1];
+Input7[opcode=Input, ref_name="A", size="3984", offset="112, 8", pattern="0, 32, 128, 32", multiport=1];
+Input9[opcode=Input, ref_name="A", size="3984", offset="112, 12", pattern="0, 32, 128, 32", multiport=1];
+Input17[opcode=Input, ref_name="B", size="512", offset="3584, 128", pattern="4, 32, -124, 32", multiport=1];
+MUL18[opcode=MUL];
+Input20[opcode=Input, ref_name="B", size="512", offset="3584, 0", pattern="4, 32, -124, 32", multiport=1];
+MUL21[opcode=MUL];
+ADD22[opcode=ADD];
+Input24[opcode=Input, ref_name="B", size="512", offset="3584, 256", pattern="4, 32, -124, 32", multiport=1];
+MUL25[opcode=MUL];
+ADD26[opcode=ADD];
+Input28[opcode=Input, ref_name="B", size="512", offset="3584, 384", pattern="4, 32, -124, 32", multiport=1];
+MUL29[opcode=MUL];
+ADD30[opcode=ADD];
+MUL31[opcode=MUL];
+Output32[opcode=Output, ref_name="C", size="4096", offset="0, 0", pattern="4, 32, 4, 32", multiport=0];
+CONST38[opcode=CONST, label="CONST38, Const=5", value=5];
+Input3 -> MUL18[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input5 -> MUL21[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input7 -> MUL25[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input9 -> MUL29[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input17 -> MUL18[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+MUL18 -> ADD22[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input20 -> MUL21[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+MUL21 -> ADD22[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+ADD22 -> ADD26[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input24 -> MUL25[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+MUL25 -> ADD26[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+ADD26 -> ADD30[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input28 -> MUL29[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+MUL29 -> ADD30[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+ADD30 -> MUL31[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+CONST38 -> MUL31[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+MUL31 -> Output32[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+}

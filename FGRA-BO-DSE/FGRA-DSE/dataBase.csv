@@ -1,0 +1,3 @@
+num_row,num_colum,num_track,max_delay,num_ipin_side1,num_ipin_side2,num_ipin_side3,num_otrack_side1,num_otrack_side2,num_otrack_side3,num_otrack_side4,num_itrack_side1,num_itrack_side2,num_itrack_side3,num_itrack_side4,area,throughput,ii,failtureRate
+5,5,3,3,1,0,0,2,3,0,1,4,2,0,1,782859.6699999999,19.0667,120.0,0.0
+4,6,1,3,0,0,0,2,1,1,3,1,1,2,3,581115.52,14.4222,156.0,0.0

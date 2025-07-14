@@ -1,0 +1,451 @@
+{
+  "name": "G",
+  "directed": true,
+  "strict": false,
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "Output10",
+      "label": "\\N",
+      "multiport": "0",
+      "offset": "0, 0",
+      "opcode": "Output",
+      "pattern": "0, 4, 4, 16, 4, 16",
+      "ref_name": "C",
+      "size": "1024"
+    },
+    {
+      "_gvid": 1,
+      "name": "Input17",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "16, 4, -48, 16, 16, 16",
+      "ref_name": "A",
+      "size": "1024"
+    },
+    {
+      "_gvid": 2,
+      "name": "MUL18",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 3,
+      "name": "Input20",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "256, 4, -764, 16, -828, 16",
+      "ref_name": "B",
+      "size": "1024"
+    },
+    {
+      "_gvid": 4,
+      "name": "MUL21",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 5,
+      "name": "ADD22",
+      "label": "\\N",
+      "opcode": "ADD"
+    },
+    {
+      "_gvid": 6,
+      "name": "Input25",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 4",
+      "opcode": "Input",
+      "pattern": "16, 4, -48, 16, 16, 16",
+      "ref_name": "A",
+      "size": "1024"
+    },
+    {
+      "_gvid": 7,
+      "name": "MUL26",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 8,
+      "name": "Input28",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 64",
+      "opcode": "Input",
+      "pattern": "256, 4, -764, 16, -828, 16",
+      "ref_name": "B",
+      "size": "1024"
+    },
+    {
+      "_gvid": 9,
+      "name": "MUL29",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 10,
+      "name": "ADD30",
+      "label": "\\N",
+      "opcode": "ADD"
+    },
+    {
+      "_gvid": 11,
+      "name": "Input33",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 8",
+      "opcode": "Input",
+      "pattern": "16, 4, -48, 16, 16, 16",
+      "ref_name": "A",
+      "size": "1024"
+    },
+    {
+      "_gvid": 12,
+      "name": "MUL34",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 13,
+      "name": "Input36",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 128",
+      "opcode": "Input",
+      "pattern": "256, 4, -764, 16, -828, 16",
+      "ref_name": "B",
+      "size": "1024"
+    },
+    {
+      "_gvid": 14,
+      "name": "MUL37",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 15,
+      "name": "ADD38",
+      "label": "\\N",
+      "opcode": "ADD"
+    },
+    {
+      "_gvid": 16,
+      "name": "Input41",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 12",
+      "opcode": "Input",
+      "pattern": "16, 4, -48, 16, 16, 16",
+      "ref_name": "A",
+      "size": "1024"
+    },
+    {
+      "_gvid": 17,
+      "name": "MUL42",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 18,
+      "name": "Input44",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 192",
+      "opcode": "Input",
+      "pattern": "256, 4, -764, 16, -828, 16",
+      "ref_name": "B",
+      "size": "1024"
+    },
+    {
+      "_gvid": 19,
+      "name": "MUL45",
+      "label": "\\N",
+      "opcode": "MUL"
+    },
+    {
+      "_gvid": 20,
+      "name": "CONST54",
+      "label": "CONST54, Const=41",
+      "opcode": "CONST",
+      "value": "41"
+    },
+    {
+      "_gvid": 21,
+      "name": "CONST56",
+      "label": "CONST56, Const=41",
+      "opcode": "CONST",
+      "value": "41"
+    },
+    {
+      "_gvid": 22,
+      "name": "CONST58",
+      "label": "CONST58, Const=41",
+      "opcode": "CONST",
+      "value": "41"
+    },
+    {
+      "_gvid": 23,
+      "name": "CONST60",
+      "label": "CONST60, Const=41",
+      "opcode": "CONST",
+      "value": "41"
+    },
+    {
+      "_gvid": 24,
+      "name": "ACC77",
+      "acc_first": "1",
+      "acc_params": "0, 4, 1, 256",
+      "label": "\\N",
+      "opcode": "ACC"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 1,
+      "head": 2,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 1,
+      "tail": 2,
+      "head": 4,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 2,
+      "tail": 3,
+      "head": 4,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 3,
+      "tail": 4,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 4,
+      "tail": 5,
+      "head": 24,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 5,
+      "tail": 6,
+      "head": 7,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 6,
+      "tail": 7,
+      "head": 9,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 7,
+      "tail": 8,
+      "head": 9,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 8,
+      "tail": 9,
+      "head": 10,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 9,
+      "tail": 10,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 10,
+      "tail": 11,
+      "head": 12,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 11,
+      "tail": 12,
+      "head": 14,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 12,
+      "tail": 13,
+      "head": 14,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 13,
+      "tail": 14,
+      "head": 15,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 14,
+      "tail": 15,
+      "head": 10,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 15,
+      "tail": 16,
+      "head": 17,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 16,
+      "tail": 17,
+      "head": 19,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 17,
+      "tail": 18,
+      "head": 19,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 18,
+      "tail": 19,
+      "head": 15,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 19,
+      "tail": 20,
+      "head": 2,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 20,
+      "tail": 21,
+      "head": 7,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 21,
+      "tail": 22,
+      "head": 12,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 22,
+      "tail": 23,
+      "head": 17,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 23,
+      "tail": 24,
+      "head": 0,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    }
+  ]
+}

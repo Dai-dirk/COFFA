@@ -1,0 +1,17 @@
+digraph G {
+mul0[opcode=mul];
+const1[opcode=const];
+add2[opcode=add];
+output3[opcode=output];
+add4[opcode=add];
+const5[opcode=const];
+input6[opcode=input];
+input7[opcode=input];
+mul0->add2[operand=0]; //mul->add
+add2->output3[operand=0]; //add->output
+input7->add2[operand=1]; //add->add
+add4->mul0[operand=0]; //add->mul
+input6->add4[operand=0]; //add->add
+const1->mul0[operand=1]; //const->mul
+const5->add4[operand=1]; //const->add
+}

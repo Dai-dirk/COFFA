@@ -1,3 +1,0 @@
-void* fgra_din_addr[7] = {data, data, data, data, data, data, data0};
-void* fgra_dout_addr[3] = {dfx, dfy, z};
-fgra_execute(fgra_din_addr, fgra_dout_addr);

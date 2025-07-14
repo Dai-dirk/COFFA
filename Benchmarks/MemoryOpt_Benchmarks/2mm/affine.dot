@@ -1,0 +1,34 @@
+Digraph G {
+Output15[opcode=Output, ref_name="C", size="1024", offset="0, 0", pattern="0, 16, 8, 8, 72, 8", multiport=1];
+Output18[opcode=Output, ref_name="C", size="1024", offset="0, 4", pattern="0, 16, 8, 8, 72, 8", multiport=1];
+Output20[opcode=Output, ref_name="C", size="1024", offset="0, 64", pattern="0, 16, 8, 8, 72, 8", multiport=1];
+Output22[opcode=Output, ref_name="C", size="1024", offset="0, 68", pattern="0, 16, 8, 8, 72, 8", multiport=1];
+Input32[opcode=Input, ref_name="A", size="1024", offset="0, 0", pattern="4, 16, -60, 8, 68, 8", multiport=1];
+Input34[opcode=Input, ref_name="B", size="1024", offset="0, 0", pattern="64, 16, -952, 8, -1016, 8", multiport=1];
+MUL35[opcode=MUL];
+Input38[opcode=Input, ref_name="A", size="1024", offset="0, 64", pattern="4, 16, -60, 8, 68, 8", multiport=1];
+MUL39[opcode=MUL];
+Input42[opcode=Input, ref_name="B", size="1024", offset="0, 4", pattern="64, 16, -952, 8, -1016, 8", multiport=1];
+MUL43[opcode=MUL];
+MUL45[opcode=MUL];
+ACC74[opcode=ACC, acc_params="0, 16, 1, 64", acc_first=1];
+ACC76[opcode=ACC, acc_params="0, 16, 1, 64", acc_first=1];
+ACC78[opcode=ACC, acc_params="0, 16, 1, 64", acc_first=1];
+ACC80[opcode=ACC, acc_params="0, 16, 1, 64", acc_first=1];
+Input32 -> MUL43[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input32 -> MUL35[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input34 -> MUL39[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input34 -> MUL35[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input38 -> MUL45[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input38 -> MUL39[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input42 -> MUL45[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input42 -> MUL43[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+MUL45 -> ACC74[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+ACC74 -> Output22[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+MUL43 -> ACC76[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+ACC76 -> Output18[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+MUL39 -> ACC78[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+ACC78 -> Output20[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+MUL35 -> ACC80[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+ACC80 -> Output15[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+}

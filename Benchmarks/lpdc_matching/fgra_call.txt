@@ -1,3 +1,0 @@
-void* fgra_din_addr[2] = {fint, fint};
-void* fgra_dout_addr[1] = {W};
-fgra_execute(fgra_din_addr, fgra_dout_addr);

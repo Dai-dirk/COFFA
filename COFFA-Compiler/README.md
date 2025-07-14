@@ -59,5 +59,7 @@ Please refer to https://yosyshq.net/yosys/documentation.html for Yosys installat
 **./back-end-tool/src:** the source codes of the back-end tool
 
 **./back-end-tool/Syn:** the lib and script for the Back-end tool calling Yosys
+
+**./back-end-tool/src/Py_Tools:** The CSP-based conflict detection and graph coloring codes in Python
      
 

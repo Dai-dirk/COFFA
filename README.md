@@ -8,15 +8,15 @@ COFFA is an open-source framework for a hybrid system with a RISC-V core and a f
 ## File catalog:
 
 **COFFA-Architecture:** The FGRA + RISC-V SoC modeling by Chisel.
-    
+
 **COFFA-Compiler:** The COFFA-Compiler includes 1) an LLVM-based front-end tool for CDFG generation and 2) a back-end tool for CDFG to FGRA mapping.
-    
+
 **FGRA-BO-DSE:** The BO-based DSE process for FGRA.
-    
+
 **Benchmark:** The irregular or memory-intensive benchmarks used in the paper.
-    
+
 **Generated_Arch:** The FGRA specification file (which describes the design parameters) and generated ADFs.
-    
+
 **Scripts:** The scripts for running different flows within Chipyard. 
 
 

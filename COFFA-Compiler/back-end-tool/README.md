@@ -1,7 +1,7 @@
-CGRA-Compiler
+FGRA-Back-end tool
 =======================
 
-CGRA mapping flow including placement and routing, data synchronization, optimization, visualization, and configuration generation
+FGRA mapping flow including placement and routing, data synchronization, optimization, visualization, and configuration generation
 
 
 ## Getting Started
@@ -13,11 +13,6 @@ CGRA mapping flow including placement and routing, data synchronization, optimiz
 #### C++-11
 
 
-### Clone the repository
-
-```sh
-git clone https://github.com/yhqiu16/TRAM
-cd TRAM/cgra-compiler
 ```
 
 ### Build

@@ -1,4 +1,4 @@
-# COFFA: A Co-Designed Framework for Fused-Grained Reconfigurable Architecture towards Efficient Irregular Loop Handling (Updating)
+# COFFA: A Co-Design Framework for Fused-Grained Reconfigurable Architecture towards Efficient Irregular Loop Handling (Updating)
 
 ## Key Futures
 
@@ -27,5 +27,6 @@ The Demo of the COFFA FPGA prototype is available at [Demo](https://youtu.be/9Y9
 
 ## Example flow
 ![demo.png](https://github.com/Dai-dirk/COFFA/blob/main/demo.png)
+
 
 

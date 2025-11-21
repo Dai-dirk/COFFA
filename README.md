@@ -23,10 +23,11 @@ COFFA is an open-source framework for a hybrid system with a RISC-V core and a f
 All folders contain README files with introductions; the detailed instructions for running COFFA can be found in the COFFA manual [Manual](https://github.com/Dai-dirk/COFFA/blob/main/COFFA-Manual-1.0.pdf).
 
 ## Demo:
-The Demo of the COFFA FPGA prototype is available at [Demo](https://youtu.be/9Y9i-jm0xQY?si=cCk1B8UQJmg_zFQZ). Special thanks to Rachel🐷 for her contributions to this video!
+The Demo of the COFFA FPGA prototype is available at [Demo](https://www.youtube.com/watch?v=fLQzUPJC028). Special thanks to Rachel🐷 for her contributions to this video!
 
 ## Example flow
 ![demo.png](https://github.com/Dai-dirk/COFFA/blob/main/demo.png)
+
 
 
 

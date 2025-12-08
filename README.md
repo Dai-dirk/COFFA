@@ -25,8 +25,12 @@ All folders contain README files with introductions; the detailed instructions f
 ## Demo:
 The Demo of the COFFA FPGA prototype is available at [Demo](https://www.youtube.com/watch?v=fLQzUPJC028). Special thanks to Rachel🐷 for her contributions to this video!
 
+## Reference:
+FPT 2025 Fusion SoC Workshop website at [FPT2025](https://fpt-2025.lin.pub), which includes all the related publications and the online framework.
+
 ## Example flow
 ![demo.png](https://github.com/Dai-dirk/COFFA/blob/main/demo.png)
+
 
 
 

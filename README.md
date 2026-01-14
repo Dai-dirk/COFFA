@@ -2,7 +2,7 @@
 
 ## Key Futures
 
-COFFA is an open-source framework for a hybrid system with a RISC-V core and a fused-grained reconfigurable accelerator.
+COFFA is an open-source framework for a hybrid system with a RISC-V core and a fused-grained reconfigurable accelerator. Let me know if you're interested!
 
 
 ## File catalog:
@@ -30,6 +30,7 @@ FPT 2025 Fusion SoC Workshop website at [FPT2025](https://fpt-2025.lin.pub), whi
 
 ## Example flow
 ![demo.png](https://github.com/Dai-dirk/COFFA/blob/main/demo.png)
+
 
 
 

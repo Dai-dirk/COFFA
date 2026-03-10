@@ -30,6 +30,8 @@ FPT 2025 Fusion SoC Workshop website at [FPT2025](https://fpt-2025.lin.pub), whi
 
 ## Example flow
 ![demo.png](https://github.com/Dai-dirk/COFFA/blob/main/demo.png)
+![demo.png](https://github.com/Dai-dirk/COFFA/blob/main/Demo.png)
+
 
 
 

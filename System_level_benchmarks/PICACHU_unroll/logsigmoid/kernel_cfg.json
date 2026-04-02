@@ -1,0 +1,43 @@
+{
+  "name": "unnamed",
+  "directed": true,
+  "strict": false,
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "Node0x5ad5e0105fb0",
+      "label": "{}",
+      "shape": "record"
+    },
+    {
+      "_gvid": 1,
+      "name": "Node0x5ad5e0106170",
+      "label": "{}",
+      "shape": "record"
+    },
+    {
+      "_gvid": 2,
+      "name": "Node0x5ad5e01062f0",
+      "label": "{}",
+      "shape": "record"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 1
+    },
+    {
+      "_gvid": 1,
+      "tail": 1,
+      "head": 1
+    },
+    {
+      "_gvid": 2,
+      "tail": 1,
+      "head": 2
+    }
+  ]
+}

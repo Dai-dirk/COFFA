@@ -1,0 +1,64 @@
+
+autoidx 1
+
+attribute \cells_not_processed 1
+attribute \src "./OpRTL/myMax.v:1.1-50.10"
+module \myMax
+
+  attribute \src "./OpRTL/myMax.v:6.6-6.24"
+  wire \internal_wire_fg_3
+
+  attribute \src "./OpRTL/myMax.v:5.13-5.28"
+  wire width 32 \internal_wire_2
+
+  attribute \src "./OpRTL/myMax.v:4.13-4.28"
+  wire width 32 \internal_wire_1
+
+  attribute \src "./OpRTL/myMax.v:3.13-3.28"
+  wire width 32 \internal_wire_0
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMax.v:46.3-48.2"
+  cell \OUTPUT \output_0
+    parameter signed \A_WIDTH 32
+    connect \A \internal_wire_2
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMax.v:37.3-42.2"
+  cell \SEL \Sel_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \C_WIDTH 1
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_2
+    connect \C \internal_wire_fg_3
+    connect \B \internal_wire_1
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMax.v:25.3-29.2"
+  cell \SGT \Sgt_1
+    parameter signed \Y_WIDTH 1
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_fg_3
+    connect \B \internal_wire_1
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMax.v:16.3-18.2"
+  cell \INPUT \input_1
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_1
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMax.v:10.3-12.2"
+  cell \INPUT \input_0
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_0
+  end
+end

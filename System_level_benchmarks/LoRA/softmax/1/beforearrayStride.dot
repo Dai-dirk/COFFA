@@ -1,0 +1,35 @@
+Digraph G {
+load3[label = "load3, ArrayName=input", shape = box, color = black];
+fcmp4[label = "fcmp4", shape = box, color = black];
+SELECT5[label = "SELECT5", shape = box, color = black];
+add6[label = "add6", shape = box, color = black];
+icmp7[label = "icmp7", shape = box, color = black];
+br8[label = "br8", shape = box, color = black];
+CONST10[label = "CONST10, Const=1", shape = box, color = black];
+CONST11[label = "CONST11, Const=2048", shape = box, color = black];
+CTRLNOT12[label = "CTRLNOT12", shape = box, color = black];
+LOOPSTART13[label = "LOOPSTART13", shape = box, color = black];
+ACC15[label = "ACC15", shape = box, color = black];
+INPUT16[label = "INPUT16", shape = box, color = black];
+InitSELECT17[label = "InitSELECT17", shape = box, color = black];
+LOOPSTART18[label = "LOOPSTART18", shape = box, color = black];
+MUL19[label = "MUL19", shape = box, color = black];
+CONST20[label = "CONST20, Const=4", shape = box, color = black];
+load3 -> SELECT5[color = black, style = bold, label = "Op=0"];
+load3 -> fcmp4[color = black, style = bold, label = "Op=0"];
+fcmp4 -> SELECT5[color = red, style = bold, label = "Op=2"];
+CONST10 -> add6[color = black, style = bold, label = "Op=1"];
+add6 -> icmp7[color = black, style = bold, label = "Op=0"];
+CONST11 -> icmp7[color = black, style = bold, label = "Op=1"];
+icmp7 -> br8[color = red, style = bold, label = "Op=0"];
+icmp7 -> CTRLNOT12[color = red, style = bold, label = "Op=0"];
+ACC15 -> add6[color = black, style = bold, label = "Op=0"];
+INPUT16 -> InitSELECT17[color = black, style = bold, label = "Op=0"];
+SELECT5 -> InitSELECT17[color = black, style = dashed, label = "Op=1"];
+InitSELECT17 -> SELECT5[color = black, style = bold, label = "Op=1"];
+InitSELECT17 -> fcmp4[color = black, style = bold, label = "Op=1"];
+ACC15 -> MUL19[color = black, style = bold, label = "Op=0"];
+CONST20 -> MUL19[color = black, style = bold, label = "Op=1"];
+MUL19 -> load3[color = black, style = bold, label = "Op=0"];
+CONST10 -> ACC15[color = black, style = bold, label = "Op=0"];
+}

@@ -1,0 +1,1308 @@
+{
+  "name": "G",
+  "directed": true,
+  "strict": false,
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "Input9",
+      "label": "\\N",
+      "multiport": "0",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "0, 16, 4, 32, 4, 32",
+      "ref_name": "D",
+      "size": "4096"
+    },
+    {
+      "_gvid": 1,
+      "name": "FADD10",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 2,
+      "name": "FSUB11",
+      "label": "\\N",
+      "opcode": "FSUB"
+    },
+    {
+      "_gvid": 3,
+      "name": "FMUL12",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 4,
+      "name": "FPTOSI13",
+      "label": "\\N",
+      "opcode": "FPTOSI"
+    },
+    {
+      "_gvid": 5,
+      "name": "SITOFP14",
+      "label": "\\N",
+      "opcode": "SITOFP"
+    },
+    {
+      "_gvid": 6,
+      "name": "FADD16",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 7,
+      "name": "SHL17",
+      "label": "\\N",
+      "opcode": "SHL"
+    },
+    {
+      "_gvid": 8,
+      "name": "ADD18",
+      "label": "\\N",
+      "opcode": "ADD"
+    },
+    {
+      "_gvid": 9,
+      "name": "FADD20",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 10,
+      "name": "FADD21",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 11,
+      "name": "FADD22",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 12,
+      "name": "FADD23",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 13,
+      "name": "FMUL24",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 14,
+      "name": "FADD25",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 15,
+      "name": "FDIV26",
+      "label": "\\N",
+      "opcode": "FDIV"
+    },
+    {
+      "_gvid": 16,
+      "name": "LSHR28",
+      "label": "\\N",
+      "opcode": "LSHR"
+    },
+    {
+      "_gvid": 17,
+      "name": "AND29",
+      "label": "\\N",
+      "opcode": "AND"
+    },
+    {
+      "_gvid": 18,
+      "name": "ADD30",
+      "label": "\\N",
+      "opcode": "ADD"
+    },
+    {
+      "_gvid": 19,
+      "name": "AND31",
+      "label": "\\N",
+      "opcode": "AND"
+    },
+    {
+      "_gvid": 20,
+      "name": "OR32",
+      "label": "\\N",
+      "opcode": "OR"
+    },
+    {
+      "_gvid": 21,
+      "name": "FADD34",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 22,
+      "name": "FADD35",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 23,
+      "name": "FADD36",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 24,
+      "name": "FADD37",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 25,
+      "name": "FADD38",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 26,
+      "name": "FMUL39",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 27,
+      "name": "SITOFP40",
+      "label": "\\N",
+      "opcode": "SITOFP"
+    },
+    {
+      "_gvid": 28,
+      "name": "FADD41",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 29,
+      "name": "Output43",
+      "label": "\\N",
+      "multiport": "0",
+      "offset": "0, 0",
+      "opcode": "Output",
+      "pattern": "0, 16, 4, 32, 4, 32",
+      "ref_name": "igelu_C",
+      "size": "4096"
+    },
+    {
+      "_gvid": 30,
+      "name": "Input50",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "8, 16, -120, 32, 8, 32",
+      "ref_name": "A",
+      "size": "4096"
+    },
+    {
+      "_gvid": 31,
+      "name": "Input52",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "256, 16, -3836, 32, -3964, 32",
+      "ref_name": "B",
+      "size": "4096"
+    },
+    {
+      "_gvid": 32,
+      "name": "FADD53",
+      "label": "\\N",
+      "opcode": "FADD"
+    },
+    {
+      "_gvid": 33,
+      "name": "Input56",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 4",
+      "opcode": "Input",
+      "pattern": "8, 16, -120, 32, 8, 32",
+      "ref_name": "A",
+      "size": "4096"
+    },
+    {
+      "_gvid": 34,
+      "name": "Input58",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 128",
+      "opcode": "Input",
+      "pattern": "256, 16, -3836, 32, -3964, 32",
+      "ref_name": "B",
+      "size": "4096"
+    },
+    {
+      "_gvid": 35,
+      "name": "Const65",
+      "label": "Const65, Const=-1.442695022",
+      "opcode": "Const",
+      "value": "-1.442695022"
+    },
+    {
+      "_gvid": 36,
+      "name": "Const66",
+      "label": "Const66, Const=-0.693147182",
+      "opcode": "Const",
+      "value": "-0.693147182"
+    },
+    {
+      "_gvid": 37,
+      "name": "Const67",
+      "label": "Const67, Const=23",
+      "opcode": "Const",
+      "value": "23"
+    },
+    {
+      "_gvid": 38,
+      "name": "Const68",
+      "label": "Const68, Const=1065353216",
+      "opcode": "Const",
+      "value": "1065353216"
+    },
+    {
+      "_gvid": 39,
+      "name": "Const69",
+      "label": "Const69, Const=0.041666668",
+      "opcode": "Const",
+      "value": "0.041666668"
+    },
+    {
+      "_gvid": 40,
+      "name": "Const70",
+      "label": "Const70, Const=0.166666672",
+      "opcode": "Const",
+      "value": "0.166666672"
+    },
+    {
+      "_gvid": 41,
+      "name": "Const71",
+      "label": "Const71, Const=0.500000000",
+      "opcode": "Const",
+      "value": "0.500000000"
+    },
+    {
+      "_gvid": 42,
+      "name": "Const72",
+      "label": "Const72, Const=1.000000000",
+      "opcode": "Const",
+      "value": "1.000000000"
+    },
+    {
+      "_gvid": 43,
+      "name": "Const73",
+      "label": "Const73, Const=1.000000000",
+      "opcode": "Const",
+      "value": "1.000000000"
+    },
+    {
+      "_gvid": 44,
+      "name": "Const74",
+      "label": "Const74, Const=1.000000000",
+      "opcode": "Const",
+      "value": "1.000000000"
+    },
+    {
+      "_gvid": 45,
+      "name": "Const75",
+      "label": "Const75, Const=1.000000000",
+      "opcode": "Const",
+      "value": "1.000000000"
+    },
+    {
+      "_gvid": 46,
+      "name": "Const76",
+      "label": "Const76, Const=23",
+      "opcode": "Const",
+      "value": "23"
+    },
+    {
+      "_gvid": 47,
+      "name": "Const77",
+      "label": "Const77, Const=255",
+      "opcode": "Const",
+      "value": "255"
+    },
+    {
+      "_gvid": 48,
+      "name": "Const78",
+      "label": "Const78, Const=-127",
+      "opcode": "Const",
+      "value": "-127"
+    },
+    {
+      "_gvid": 49,
+      "name": "Const79",
+      "label": "Const79, Const=8388607",
+      "opcode": "Const",
+      "value": "8388607"
+    },
+    {
+      "_gvid": 50,
+      "name": "Const80",
+      "label": "Const80, Const=1065353216",
+      "opcode": "Const",
+      "value": "1065353216"
+    },
+    {
+      "_gvid": 51,
+      "name": "Const81",
+      "label": "Const81, Const=-1.000000000",
+      "opcode": "Const",
+      "value": "-1.000000000"
+    },
+    {
+      "_gvid": 52,
+      "name": "Const82",
+      "label": "Const82, Const=0.200000003",
+      "opcode": "Const",
+      "value": "0.200000003"
+    },
+    {
+      "_gvid": 53,
+      "name": "Const83",
+      "label": "Const83, Const=-0.250000000",
+      "opcode": "Const",
+      "value": "-0.250000000"
+    },
+    {
+      "_gvid": 54,
+      "name": "Const84",
+      "label": "Const84, Const=0.333333343",
+      "opcode": "Const",
+      "value": "0.333333343"
+    },
+    {
+      "_gvid": 55,
+      "name": "Const85",
+      "label": "Const85, Const=-0.500000000",
+      "opcode": "Const",
+      "value": "-0.500000000"
+    },
+    {
+      "_gvid": 56,
+      "name": "Const86",
+      "label": "Const86, Const=1.000000000",
+      "opcode": "Const",
+      "value": "1.000000000"
+    },
+    {
+      "_gvid": 57,
+      "name": "Const87",
+      "label": "Const87, Const=1.442695022",
+      "opcode": "Const",
+      "value": "1.442695022"
+    },
+    {
+      "_gvid": 58,
+      "name": "FMUL93",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 59,
+      "name": "FMUL94",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 60,
+      "name": "FMUL95",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 61,
+      "name": "FMUL96",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 62,
+      "name": "FMUL97",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 63,
+      "name": "FMUL98",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 64,
+      "name": "FMUL99",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 65,
+      "name": "FMUL100",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 66,
+      "name": "FMUL101",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 67,
+      "name": "FMUL102",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 68,
+      "name": "FMUL103",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 69,
+      "name": "FMUL104",
+      "label": "\\N",
+      "opcode": "FMUL"
+    },
+    {
+      "_gvid": 70,
+      "name": "FACC119",
+      "acc_first": "1",
+      "acc_params": "0, 16, 1, 1024",
+      "label": "\\N",
+      "opcode": "FACC"
+    },
+    {
+      "_gvid": 71,
+      "name": "Const120",
+      "label": "Const120, Const=0",
+      "opcode": "Const",
+      "value": "0"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 1,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 1,
+      "tail": 1,
+      "head": 2,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 2,
+      "tail": 1,
+      "head": 3,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 3,
+      "tail": 2,
+      "head": 6,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 4,
+      "tail": 3,
+      "head": 4,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 5,
+      "tail": 4,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 6,
+      "tail": 4,
+      "head": 7,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 7,
+      "tail": 5,
+      "head": 58,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 8,
+      "tail": 6,
+      "head": 59,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 9,
+      "tail": 6,
+      "head": 60,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 10,
+      "tail": 6,
+      "head": 61,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 11,
+      "tail": 6,
+      "head": 62,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 12,
+      "tail": 7,
+      "head": 8,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 13,
+      "tail": 8,
+      "head": 13,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 14,
+      "tail": 9,
+      "head": 60,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 15,
+      "tail": 10,
+      "head": 61,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 16,
+      "tail": 11,
+      "head": 62,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 17,
+      "tail": 12,
+      "head": 13,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 18,
+      "tail": 13,
+      "head": 14,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 19,
+      "tail": 14,
+      "head": 15,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 20,
+      "tail": 15,
+      "head": 16,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 21,
+      "tail": 15,
+      "head": 19,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 22,
+      "tail": 16,
+      "head": 17,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 23,
+      "tail": 17,
+      "head": 18,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 24,
+      "tail": 18,
+      "head": 27,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 25,
+      "tail": 19,
+      "head": 20,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 26,
+      "tail": 20,
+      "head": 21,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 27,
+      "tail": 21,
+      "head": 26,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 28,
+      "tail": 21,
+      "head": 63,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 29,
+      "tail": 21,
+      "head": 64,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 30,
+      "tail": 21,
+      "head": 65,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 31,
+      "tail": 21,
+      "head": 66,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 32,
+      "tail": 22,
+      "head": 64,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 33,
+      "tail": 23,
+      "head": 65,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 34,
+      "tail": 24,
+      "head": 66,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 35,
+      "tail": 25,
+      "head": 26,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 36,
+      "tail": 26,
+      "head": 67,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 37,
+      "tail": 27,
+      "head": 28,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 38,
+      "tail": 28,
+      "head": 29,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 39,
+      "tail": 30,
+      "head": 68,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 40,
+      "tail": 31,
+      "head": 68,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 41,
+      "tail": 32,
+      "head": 70,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 42,
+      "tail": 33,
+      "head": 69,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 43,
+      "tail": 34,
+      "head": 69,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 44,
+      "tail": 35,
+      "head": 3,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 45,
+      "tail": 36,
+      "head": 58,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 46,
+      "tail": 37,
+      "head": 7,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 47,
+      "tail": 38,
+      "head": 8,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 48,
+      "tail": 39,
+      "head": 59,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 49,
+      "tail": 40,
+      "head": 9,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 50,
+      "tail": 41,
+      "head": 10,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 51,
+      "tail": 42,
+      "head": 11,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 52,
+      "tail": 43,
+      "head": 12,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 53,
+      "tail": 44,
+      "head": 14,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 54,
+      "tail": 45,
+      "head": 15,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 55,
+      "tail": 46,
+      "head": 16,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 56,
+      "tail": 47,
+      "head": 17,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 57,
+      "tail": 48,
+      "head": 18,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 58,
+      "tail": 49,
+      "head": 19,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 59,
+      "tail": 50,
+      "head": 20,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 60,
+      "tail": 51,
+      "head": 21,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 61,
+      "tail": 52,
+      "head": 63,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 62,
+      "tail": 53,
+      "head": 22,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 63,
+      "tail": 54,
+      "head": 23,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 64,
+      "tail": 55,
+      "head": 24,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 65,
+      "tail": 56,
+      "head": 25,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 66,
+      "tail": 57,
+      "head": 67,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 67,
+      "tail": 58,
+      "head": 6,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 68,
+      "tail": 59,
+      "head": 9,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 69,
+      "tail": 60,
+      "head": 10,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 70,
+      "tail": 61,
+      "head": 11,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 71,
+      "tail": 62,
+      "head": 12,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 72,
+      "tail": 63,
+      "head": 22,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 73,
+      "tail": 64,
+      "head": 23,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 74,
+      "tail": 65,
+      "head": 24,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 75,
+      "tail": 66,
+      "head": 25,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 76,
+      "tail": 67,
+      "head": 28,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 77,
+      "tail": 68,
+      "head": 32,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 78,
+      "tail": 69,
+      "head": 32,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 79,
+      "tail": 70,
+      "head": 1,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 80,
+      "tail": 71,
+      "head": 2,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    }
+  ]
+}

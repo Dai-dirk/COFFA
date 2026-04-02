@@ -1,0 +1,28 @@
+Digraph G {
+edge [colorscheme=paired12];
+"Input0"[label = "\N\nlat=2"];
+"Input3"[label = "\N\nlat=2"];
+"FDIV4"[label = "\N\nlat=10"];
+"Input3"->"FDIV4"[weight = 4, color = 9, label ="lat = 1\nRDU = 1\nlogiclat=0\nop=0"];
+"Input0"->"FDIV4"[weight = 4, color = 9, label ="lat = 2\nRDU = 0\nlogiclat=0\nop=1"];
+"Output6"[label = "\N\nlat=14"];
+"FDIV4"->"Output6"[weight = 4, color = 9, label ="lat = 3\nRDU = 0\nlogiclat=0\nop=0"];
+"Input9"[label = "\N\nlat=2"];
+"FDIV10"[label = "\N\nlat=9"];
+"Input9"->"FDIV10"[weight = 4, color = 9, label ="lat = 1\nRDU = 0\nlogiclat=0\nop=0"];
+"Input0"->"FDIV10"[weight = 4, color = 9, label ="lat = 1\nRDU = 0\nlogiclat=0\nop=1"];
+"Output12"[label = "\N\nlat=12"];
+"FDIV10"->"Output12"[weight = 4, color = 9, label ="lat = 2\nRDU = 0\nlogiclat=0\nop=0"];
+"Input15"[label = "\N\nlat=2"];
+"FDIV16"[label = "\N\nlat=9"];
+"Input15"->"FDIV16"[weight = 4, color = 9, label ="lat = 1\nRDU = 0\nlogiclat=0\nop=0"];
+"Input0"->"FDIV16"[weight = 4, color = 9, label ="lat = 1\nRDU = 0\nlogiclat=0\nop=1"];
+"Output18"[label = "\N\nlat=12"];
+"FDIV16"->"Output18"[weight = 4, color = 9, label ="lat = 2\nRDU = 0\nlogiclat=0\nop=0"];
+"Input21"[label = "\N\nlat=2"];
+"FDIV22"[label = "\N\nlat=9"];
+"Input21"->"FDIV22"[weight = 4, color = 9, label ="lat = 1\nRDU = 0\nlogiclat=0\nop=0"];
+"Input0"->"FDIV22"[weight = 4, color = 9, label ="lat = 0\nRDU = 1\nlogiclat=0\nop=1"];
+"Output24"[label = "\N\nlat=13"];
+"FDIV22"->"Output24"[weight = 4, color = 9, label ="lat = 3\nRDU = 0\nlogiclat=0\nop=0"];
+}

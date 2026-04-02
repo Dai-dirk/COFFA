@@ -1,0 +1,194 @@
+
+autoidx 1
+
+attribute \cells_not_processed 1
+attribute \src "./OpRTL/mySat.v:1.1-159.10"
+module \mySat
+
+  attribute \src "./OpRTL/mySat.v:16.7-16.26"
+  wire \internal_wire_13_fg
+
+  attribute \src "./OpRTL/mySat.v:15.7-15.26"
+  wire \internal_wire_12_fg
+
+  attribute \src "./OpRTL/mySat.v:14.13-14.29"
+  wire width 32 \internal_wire_11
+
+  attribute \src "./OpRTL/mySat.v:13.13-13.29"
+  wire width 32 \internal_wire_10
+
+  attribute \src "./OpRTL/mySat.v:12.13-12.28"
+  wire width 32 \internal_wire_9
+
+  attribute \src "./OpRTL/mySat.v:11.13-11.28"
+  wire width 32 \internal_wire_8
+
+  attribute \src "./OpRTL/mySat.v:10.13-10.28"
+  wire width 32 \internal_wire_7
+
+  attribute \src "./OpRTL/mySat.v:9.13-9.28"
+  wire width 32 \internal_wire_6
+
+  attribute \src "./OpRTL/mySat.v:8.13-8.28"
+  wire width 32 \internal_wire_5
+
+  attribute \src "./OpRTL/mySat.v:7.13-7.28"
+  wire width 32 \internal_wire_4
+
+  attribute \src "./OpRTL/mySat.v:6.13-6.28"
+  wire width 32 \internal_wire_3
+
+  attribute \src "./OpRTL/mySat.v:5.13-5.28"
+  wire width 32 \internal_wire_2
+
+  attribute \src "./OpRTL/mySat.v:4.13-4.28"
+  wire width 32 \internal_wire_1
+
+  attribute \src "./OpRTL/mySat.v:3.13-3.28"
+  wire width 32 \internal_wire_0
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:155.3-157.2"
+  cell \OUTPUT \output_0
+    parameter signed \A_WIDTH 32
+    connect \A \internal_wire_11
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:146.3-151.2"
+  cell \SEL \Sel_2
+    parameter signed \Y_WIDTH 32
+    parameter signed \C_WIDTH 1
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_11
+    connect \C \internal_wire_13_fg
+    connect \B \internal_wire_8
+    connect \A \internal_wire_10
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:133.3-138.2"
+  cell \SEL \Sel_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \C_WIDTH 1
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_10
+    connect \C \internal_wire_12_fg
+    connect \B \internal_wire_9
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:120.3-124.2"
+  cell \SGT \Sgt_1
+    parameter signed \Y_WIDTH 1
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_13_fg
+    connect \B \internal_wire_8
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:110.3-114.2"
+  cell \SLT \Slt_1
+    parameter signed \Y_WIDTH 1
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_12_fg
+    connect \B \internal_wire_9
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:98.3-102.2"
+  cell \XOR \Xor_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_9
+    connect \B \internal_wire_7
+    connect \A \internal_wire_5
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:85.3-89.2"
+  cell \SUB \Sub_2
+    parameter signed \Y_WIDTH 32
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_8
+    connect \B \internal_wire_6
+    connect \A \internal_wire_5
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:75.3-79.2"
+  cell \SHL \Shl_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_5
+    connect \B \internal_wire_3
+    connect \A \internal_wire_4
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:64.3-68.2"
+  cell \SUB \Sub_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_3
+    connect \B \internal_wire_2
+    connect \A \internal_wire_1
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:56.3-58.2"
+  cell \CONST \const_3
+    parameter \VALUE 32'11111111111111111111111111111111
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_7
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:48.3-50.2"
+  cell \CONST \const_2
+    parameter signed \VALUE 1
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_6
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:41.3-43.2"
+  cell \CONST \const_1
+    parameter signed \VALUE 1
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_4
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:33.3-35.2"
+  cell \CONST \const_0
+    parameter signed \VALUE 1
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_2
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:26.3-28.2"
+  cell \INPUT \input_1
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_1
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/mySat.v:20.3-22.2"
+  cell \INPUT \input_0
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_0
+  end
+end

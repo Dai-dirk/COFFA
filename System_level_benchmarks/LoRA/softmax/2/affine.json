@@ -1,0 +1,95 @@
+{
+  "name": "G",
+  "directed": true,
+  "strict": false,
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "Input3",
+      "label": "\\N",
+      "multiport": "0",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "4, 2048",
+      "ref_name": "input",
+      "size": "8192"
+    },
+    {
+      "_gvid": 1,
+      "name": "FSUB4",
+      "label": "\\N",
+      "opcode": "FSUB"
+    },
+    {
+      "_gvid": 2,
+      "name": "myExp5",
+      "label": "\\N",
+      "opcode": "myExp"
+    },
+    {
+      "_gvid": 3,
+      "name": "Output7",
+      "label": "\\N",
+      "multiport": "0",
+      "offset": "0, 0",
+      "opcode": "Output",
+      "pattern": "4, 2048",
+      "ref_name": "output",
+      "size": "8192"
+    },
+    {
+      "_gvid": 4,
+      "name": "INREG13",
+      "label": "\\N",
+      "multiport": "0",
+      "offset": "0, 0",
+      "opcode": "INREG",
+      "pattern": "0, 2048",
+      "ref_name": "max_arr",
+      "size": "4"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 1,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 1,
+      "tail": 1,
+      "head": 2,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 2,
+      "tail": 2,
+      "head": 3,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 3,
+      "tail": 4,
+      "head": 1,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    }
+  ]
+}

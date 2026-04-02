@@ -1,0 +1,3 @@
+void* cgra_din_addr[5] = {A, A, B, B, D};
+void* cgra_dout_addr[1] = {igelu_C};
+cgra_execute(cgra_din_addr, cgra_dout_addr);

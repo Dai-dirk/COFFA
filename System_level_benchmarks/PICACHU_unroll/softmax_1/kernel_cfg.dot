@@ -1,0 +1,10 @@
+digraph "CFG for 'kernel' function" {
+	label="CFG for 'kernel' function";
+
+	Node0x55edc8fbe420 [shape=record,label="{entry:\l  %call = tail call i32 bitcast (i32 (...)* @loop_begin to i32 ()*)() #2\l  %0 = load volatile float, float* getelementptr inbounds ([1 x float], [1 x\l... float]* @max_arr, i32 0, i32 0), align 4, !tbaa !3\l  br label %for.body\l}"];
+	Node0x55edc8fbe420 -> Node0x55edc8fbfe50;
+	Node0x55edc8fbffc0 [shape=record,label="{for.cond.cleanup:                                 \l  %maxx.1.1.lcssa = phi float [ %maxx.1.1, %for.body ]\l  store volatile float %maxx.1.1.lcssa, float* getelementptr inbounds ([1 x\l... float], [1 x float]* @max_arr, i32 0, i32 0), align 4, !tbaa !3\l  %call3 = tail call i32 bitcast (i32 (...)* @loop_end to i32 ()*)() #2\l  ret void\l}"];
+	Node0x55edc8fbfe50 [shape=record,label="{for.body:                                         \l  %i.012 = phi i32 [ 0, %entry ], [ %inc.1, %for.body ]\l  %maxx.011 = phi float [ %0, %entry ], [ %maxx.1.1, %for.body ]\l  %arrayidx = getelementptr inbounds float, float* %input, i32 %i.012\l  %1 = load float, float* %arrayidx, align 4, !tbaa !3\l  %cmp1 = fcmp ogt float %1, %maxx.011\l  %maxx.1 = select i1 %cmp1, float %1, float %maxx.011\l  %inc = or i32 %i.012, 1\l  %arrayidx.1 = getelementptr inbounds float, float* %input, i32 %inc\l  %2 = load float, float* %arrayidx.1, align 4, !tbaa !3\l  %cmp1.1 = fcmp ogt float %2, %maxx.1\l  %maxx.1.1 = select i1 %cmp1.1, float %2, float %maxx.1\l  %inc.1 = add nuw nsw i32 %i.012, 2\l  %exitcond.1 = icmp eq i32 %inc.1, 2048\l  br i1 %exitcond.1, label %for.cond.cleanup, label %for.body, !llvm.loop !7\l|{<s0>T|<s1>F}}"];
+	Node0x55edc8fbfe50:s0 -> Node0x55edc8fbffc0;
+	Node0x55edc8fbfe50:s1 -> Node0x55edc8fbfe50;
+}

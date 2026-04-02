@@ -1,0 +1,9 @@
+digraph G {
+Input0[opcode=Input, ref_name="sum_arr", size="4", offset="0, 0", pattern="0, 2048", multiport=0];
+Input3[opcode=Input, ref_name="input", size="8192", offset="0, 0", pattern="4, 2048", multiport=0];
+FDIV4[opcode=FDIV];
+Output6[opcode=Output, ref_name="output", size="8192", offset="0, 0", pattern="4, 2048", multiport=0];
+Input0 -> FDIV4[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input3 -> FDIV4[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+FDIV4 -> Output6[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+}

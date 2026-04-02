@@ -1,0 +1,5 @@
+# step 1: load internal cells library
+read_verilog -lib ./Syn/lib.v
+
+# step 2: load the rtlil file of the design
+read_rtlil ./Syn/temp_rtlil.il

@@ -1,0 +1,145 @@
+{
+  "name": "G",
+  "directed": true,
+  "strict": false,
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "Input1",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "0, 1024",
+      "ref_name": "max_arr",
+      "size": "4"
+    },
+    {
+      "_gvid": 1,
+      "name": "Input5",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Input",
+      "pattern": "8, 1024",
+      "ref_name": "input",
+      "size": "8192"
+    },
+    {
+      "_gvid": 2,
+      "name": "Input10",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 4",
+      "opcode": "Input",
+      "pattern": "8, 1024",
+      "ref_name": "input",
+      "size": "8192"
+    },
+    {
+      "_gvid": 3,
+      "name": "Output18",
+      "label": "\\N",
+      "multiport": "1",
+      "offset": "0, 0",
+      "opcode": "Output",
+      "pattern": "0, 1024",
+      "ref_name": "max_arr",
+      "size": "4"
+    },
+    {
+      "_gvid": 4,
+      "name": "ISEL26",
+      "isel_params": "1024, 1, 1",
+      "label": "\\N",
+      "opcode": "ISEL"
+    },
+    {
+      "_gvid": 5,
+      "name": "FMAX27",
+      "label": "\\N",
+      "opcode": "FMAX"
+    },
+    {
+      "_gvid": 6,
+      "name": "FMAX28",
+      "label": "\\N",
+      "opcode": "FMAX"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 4,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 1,
+      "tail": 1,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 2,
+      "tail": 2,
+      "head": 6,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 3,
+      "tail": 4,
+      "head": 5,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    },
+    {
+      "_gvid": 4,
+      "tail": 6,
+      "head": 3,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "bold"
+    },
+    {
+      "_gvid": 5,
+      "tail": 6,
+      "head": 4,
+      "Width": "32",
+      "backedge": "1",
+      "color": "black",
+      "constraint": "false",
+      "label": "Op=0",
+      "operand": "0",
+      "style": "dashed"
+    },
+    {
+      "_gvid": 6,
+      "tail": 6,
+      "head": 6,
+      "Width": "32",
+      "color": "black",
+      "label": "Op=1",
+      "operand": "1",
+      "style": "bold"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+Digraph G {
+"Input0"[opcode = INPUT, id= 1, label = "\N\nlat=2"];
+"Input3"[opcode = INPUT, id= 2, label = "\N\nlat=2"];
+"FDIV4"[opcode = FDIV, id= 3, label = "\N\nlat=6"];
+"Input3"->"FDIV4"[Width = 32, operand = 0, color = black, label ="op = 0\ndelay = 0"];
+"Input0"->"FDIV4"[Width = 32, operand = 1, color = black, label ="op = 1\ndelay = 0"];
+"Output6"[opcode = OUTPUT, id= 4, label = "\N\nlat=1"];
+"FDIV4"->"Output6"[Width = 32, operand = 0, color = black, label ="op = 0\ndelay = 0"];
+"Input9"[opcode = INPUT, id= 5, label = "\N\nlat=2"];
+"FDIV10"[opcode = FDIV, id= 6, label = "\N\nlat=6"];
+"Input9"->"FDIV10"[Width = 32, operand = 0, color = black, label ="op = 0\ndelay = 0"];
+"Input0"->"FDIV10"[Width = 32, operand = 1, color = black, label ="op = 1\ndelay = 0"];
+"Output12"[opcode = OUTPUT, id= 7, label = "\N\nlat=1"];
+"FDIV10"->"Output12"[Width = 32, operand = 0, color = black, label ="op = 0\ndelay = 0"];
+"Input15"[opcode = INPUT, id= 8, label = "\N\nlat=2"];
+"FDIV16"[opcode = FDIV, id= 9, label = "\N\nlat=6"];
+"Input15"->"FDIV16"[Width = 32, operand = 0, color = black, label ="op = 0\ndelay = 0"];
+"Input0"->"FDIV16"[Width = 32, operand = 1, color = black, label ="op = 1\ndelay = 0"];
+"Output18"[opcode = OUTPUT, id= 10, label = "\N\nlat=1"];
+"FDIV16"->"Output18"[Width = 32, operand = 0, color = black, label ="op = 0\ndelay = 0"];
+"Input21"[opcode = INPUT, id= 11, label = "\N\nlat=2"];
+"FDIV22"[opcode = FDIV, id= 12, label = "\N\nlat=6"];
+"Input21"->"FDIV22"[Width = 32, operand = 0, color = black, label ="op = 0\ndelay = 0"];
+"Input0"->"FDIV22"[Width = 32, operand = 1, color = black, label ="op = 1\ndelay = 0"];
+"Output24"[opcode = OUTPUT, id= 13, label = "\N\nlat=1"];
+"FDIV22"->"Output24"[Width = 32, operand = 0, color = black, label ="op = 0\ndelay = 0"];
+}

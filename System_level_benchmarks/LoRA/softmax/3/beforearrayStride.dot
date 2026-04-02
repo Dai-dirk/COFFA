@@ -1,0 +1,36 @@
+Digraph G {
+load0[label = "load0, ArrayName=sum_arr, Stride=[ 0, 0; ], Bounds=[ (0, 0)*4; ]", shape = box, color = black];
+load3[label = "load3, ArrayName=input, Stride=[ 0, 4; ], Bounds=[ (0, 8188)*4; ]", shape = box, color = black];
+fdiv4[label = "fdiv4", shape = box, color = black];
+store6[label = "store6, ArrayName=output", shape = box, color = black];
+add7[label = "add7", shape = box, color = black];
+icmp8[label = "icmp8", shape = box, color = black];
+br9[label = "br9", shape = box, color = black];
+INPUT10[label = "INPUT10", shape = box, color = black];
+CONST11[label = "CONST11, Const=1", shape = box, color = black];
+CONST12[label = "CONST12, Const=2048", shape = box, color = black];
+CTRLNOT13[label = "CTRLNOT13", shape = box, color = black];
+LOOPSTART14[label = "LOOPSTART14", shape = box, color = black];
+ACC16[label = "ACC16", shape = box, color = black];
+MUL17[label = "MUL17", shape = box, color = black];
+CONST18[label = "CONST18, Const=4", shape = box, color = black];
+MUL19[label = "MUL19", shape = box, color = black];
+CONST20[label = "CONST20, Const=4", shape = box, color = black];
+INPUT10 -> load0[color = black, style = bold, label = "Op=0"];
+load0 -> fdiv4[color = black, style = bold, label = "Op=1"];
+load3 -> fdiv4[color = black, style = bold, label = "Op=0"];
+fdiv4 -> store6[color = black, style = bold, label = "Op=0"];
+CONST11 -> add7[color = black, style = bold, label = "Op=1"];
+add7 -> icmp8[color = black, style = bold, label = "Op=0"];
+CONST12 -> icmp8[color = black, style = bold, label = "Op=1"];
+icmp8 -> br9[color = red, style = bold, label = "Op=0"];
+icmp8 -> CTRLNOT13[color = red, style = bold, label = "Op=0"];
+ACC16 -> add7[color = black, style = bold, label = "Op=0"];
+ACC16 -> MUL17[color = black, style = bold, label = "Op=0"];
+CONST18 -> MUL17[color = black, style = bold, label = "Op=1"];
+MUL17 -> load3[color = black, style = bold, label = "Op=0"];
+ACC16 -> MUL19[color = black, style = bold, label = "Op=0"];
+CONST20 -> MUL19[color = black, style = bold, label = "Op=1"];
+MUL19 -> store6[color = black, style = bold, label = "Op=1"];
+CONST11 -> ACC16[color = black, style = bold, label = "Op=0"];
+}

@@ -1,0 +1,30 @@
+{
+    "alpha": 100000000,
+    "beta": 0,
+    "coef_norm": true,
+    "max_order_sum": 100,
+    "sample_count": 35000,
+    "piecewise_threshold": 0.001,
+    "error_evaluation": "mse",
+    "order_distribute_method": "ga",
+    "ga_config": {
+        "population_size": 16,
+        "generations": 10,
+        "lambda_": 16,
+        "mutation_rate": 0.2,
+        "crossover_rate": 0.7,
+        "multiprocessing": true,
+        "pool_size": 16
+    },
+    "verbose": true,
+    "Parity": 0,
+    "max_segments": 6,
+    "name": "sigmoid",
+    "int_width": 0,
+    "frac_width": 32,
+    "max_order": 5,
+    "domain": [
+        -8,
+        8
+    ]
+}

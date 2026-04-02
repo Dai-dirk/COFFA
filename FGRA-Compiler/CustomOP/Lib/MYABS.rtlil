@@ -1,0 +1,115 @@
+
+autoidx 1
+
+attribute \cells_not_processed 1
+attribute \src "./OpRTL/myAbs.v:1.1-88.10"
+module \myAbs
+
+  attribute \src "./OpRTL/myAbs.v:10.6-10.24"
+  wire \internal_wire_fg_7
+
+  attribute \src "./OpRTL/myAbs.v:9.13-9.28"
+  wire width 32 \internal_wire_6
+
+  attribute \src "./OpRTL/myAbs.v:8.13-8.28"
+  wire width 32 \internal_wire_5
+
+  attribute \src "./OpRTL/myAbs.v:7.13-7.28"
+  wire width 32 \internal_wire_4
+
+  attribute \src "./OpRTL/myAbs.v:6.13-6.28"
+  wire width 32 \internal_wire_3
+
+  attribute \src "./OpRTL/myAbs.v:5.13-5.28"
+  wire width 32 \internal_wire_2
+
+  attribute \src "./OpRTL/myAbs.v:4.13-4.28"
+  wire width 32 \internal_wire_1
+
+  attribute \src "./OpRTL/myAbs.v:3.13-3.28"
+  wire width 32 \internal_wire_0
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:84.3-86.2"
+  cell \OUTPUT \output_0
+    parameter signed \A_WIDTH 32
+    connect \A \internal_wire_6
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:75.3-80.2"
+  cell \SEL \Sel_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \C_WIDTH 1
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_6
+    connect \C \internal_wire_fg_7
+    connect \B \internal_wire_5
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:64.3-68.2"
+  cell \ADD \Add_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_5
+    connect \B \internal_wire_4
+    connect \A \internal_wire_2
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:54.3-58.2"
+  cell \XOR \Xor_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_4
+    connect \B \internal_wire_3
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:44.3-48.2"
+  cell \SGE \Sgt_1
+    parameter signed \Y_WIDTH 1
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_fg_7
+    connect \B \internal_wire_1
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:36.3-38.2"
+  cell \CONST \const_2
+    parameter \VALUE 32'11111111111111111111111111111111
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_3
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:29.3-31.2"
+  cell \CONST \const_1
+    parameter signed \VALUE 1
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_2
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:22.3-24.2"
+  cell \CONST \const_0
+    parameter signed \VALUE 0
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_1
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myAbs.v:14.3-16.2"
+  cell \INPUT \input_0
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_0
+  end
+end

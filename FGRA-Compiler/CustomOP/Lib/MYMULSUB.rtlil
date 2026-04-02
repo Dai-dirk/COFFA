@@ -1,0 +1,72 @@
+
+autoidx 1
+
+attribute \cells_not_processed 1
+attribute \src "./OpRTL/myMulSub.v:1.1-51.10"
+module \myMulSub
+
+  attribute \src "./OpRTL/myMulSub.v:7.13-7.28"
+  wire width 32 \internal_wire_4
+
+  attribute \src "./OpRTL/myMulSub.v:6.13-6.28"
+  wire width 32 \internal_wire_3
+
+  attribute \src "./OpRTL/myMulSub.v:5.13-5.28"
+  wire width 32 \internal_wire_2
+
+  attribute \src "./OpRTL/myMulSub.v:4.13-4.28"
+  wire width 32 \internal_wire_1
+
+  attribute \src "./OpRTL/myMulSub.v:3.13-3.28"
+  wire width 32 \internal_wire_0
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMulSub.v:48.3-50.2"
+  cell \OUTPUT \output_0
+    parameter signed \A_WIDTH 32
+    connect \A \internal_wire_4
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMulSub.v:39.2-43.2"
+  cell \SUB \Sub_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_4
+    connect \B \internal_wire_2
+    connect \A \internal_wire_3
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMulSub.v:29.2-33.2"
+  cell \MUL \Mul_1
+    parameter signed \Y_WIDTH 32
+    parameter signed \B_WIDTH 32
+    parameter signed \A_WIDTH 32
+    connect \Y \internal_wire_3
+    connect \B \internal_wire_1
+    connect \A \internal_wire_0
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMulSub.v:21.3-23.2"
+  cell \INPUT \input_2
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_2
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMulSub.v:16.3-18.2"
+  cell \INPUT \input_1
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_1
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "./OpRTL/myMulSub.v:11.3-13.2"
+  cell \INPUT \input_0
+    parameter signed \Y_WIDTH 32
+    connect \Y \internal_wire_0
+  end
+end

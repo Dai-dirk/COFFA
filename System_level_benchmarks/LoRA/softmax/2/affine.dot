@@ -1,0 +1,11 @@
+digraph G {
+Input3[opcode=Input, ref_name="input", size="8192", offset="0, 0", pattern="4, 2048", multiport=0];
+FSUB4[opcode=FSUB];
+myExp5[opcode=myExp];
+Output7[opcode=Output, ref_name="output", size="8192", offset="0, 0", pattern="4, 2048", multiport=0];
+INREG13[opcode=INREG, ref_name="max_arr", size="4", offset="0, 0", pattern="0, 2048", multiport=0];
+Input3 -> FSUB4[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+INREG13 -> FSUB4[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+FSUB4 -> myExp5[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+myExp5 -> Output7[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+}

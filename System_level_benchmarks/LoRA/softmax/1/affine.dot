@@ -1,0 +1,10 @@
+digraph G {
+Input3[opcode=Input, ref_name="input", size="8192", offset="0, 0", pattern="4, 2048", multiport=0];
+Input16[opcode=Input];
+ISEL17[opcode=ISEL, isel_params="2048, 1, 1"];
+FMAX18[opcode=FMAX];
+Input16 -> ISEL17[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input3 -> FMAX18[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+ISEL17 -> FMAX18[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+FMAX18 -> ISEL17[operand = 0, Width = 32 ,color = black, style = dashed, constraint=false, backedge=1, label = "Op=0"];
+}

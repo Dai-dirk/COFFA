@@ -1,0 +1,10 @@
+digraph "CFG for 'kernel' function" {
+	label="CFG for 'kernel' function";
+
+	Node0x56097fc9c000 [shape=record,label="{entry:\l  %call = tail call i32 bitcast (i32 (...)* @loop_begin to i32 ()*)() #2\l  %0 = load float, float* getelementptr inbounds ([1 x float], [1 x float]*\l... @sum_arr, i32 0, i32 0), align 4, !tbaa !3\l  %1 = insertelement \<4 x float\> undef, float %0, i32 0\l  %2 = shufflevector \<4 x float\> %1, \<4 x float\> undef, \<4 x i32\>\l... zeroinitializer\l  br label %for.body\l}"];
+	Node0x56097fc9c000 -> Node0x56097fc9e560;
+	Node0x56097fc9e6d0 [shape=record,label="{for.cond.cleanup:                                 \l  %call2 = tail call i32 bitcast (i32 (...)* @loop_end to i32 ()*)() #2\l  ret void\l}"];
+	Node0x56097fc9e560 [shape=record,label="{for.body:                                         \l  %i.07 = phi i32 [ 0, %entry ], [ %inc.3, %for.body ]\l  %arrayidx = getelementptr inbounds [2048 x float], [2048 x float]* @input,\l... i32 0, i32 %i.07\l  %arrayidx1 = getelementptr inbounds [2048 x float], [2048 x float]* @output,\l... i32 0, i32 %i.07\l  %3 = bitcast float* %arrayidx to \<4 x float\>*\l  %4 = load \<4 x float\>, \<4 x float\>* %3, align 4, !tbaa !3\l  %5 = fdiv \<4 x float\> %4, %2\l  %6 = bitcast float* %arrayidx1 to \<4 x float\>*\l  store \<4 x float\> %5, \<4 x float\>* %6, align 4, !tbaa !3\l  %inc.3 = add nuw nsw i32 %i.07, 4\l  %exitcond.3 = icmp eq i32 %inc.3, 2048\l  br i1 %exitcond.3, label %for.cond.cleanup, label %for.body, !llvm.loop !7\l|{<s0>T|<s1>F}}"];
+	Node0x56097fc9e560:s0 -> Node0x56097fc9e6d0;
+	Node0x56097fc9e560:s1 -> Node0x56097fc9e560;
+}

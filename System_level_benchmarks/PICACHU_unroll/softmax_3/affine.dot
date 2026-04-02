@@ -1,0 +1,27 @@
+Digraph G {
+Input0[opcode=Input, ref_name="sum_arr", size="4", offset="0, 0", pattern="0, 512", multiport=0];
+Input3[opcode=Input, ref_name="input", size="8192", offset="0, 0", pattern="16, 512", multiport=1];
+FDIV4[opcode=FDIV];
+Output6[opcode=Output, ref_name="output", size="8192", offset="0, 0", pattern="16, 512", multiport=1];
+Input9[opcode=Input, ref_name="input", size="8192", offset="0, 4", pattern="16, 512", multiport=1];
+FDIV10[opcode=FDIV];
+Output12[opcode=Output, ref_name="output", size="8192", offset="0, 4", pattern="16, 512", multiport=1];
+Input15[opcode=Input, ref_name="input", size="8192", offset="0, 8", pattern="16, 512", multiport=1];
+FDIV16[opcode=FDIV];
+Output18[opcode=Output, ref_name="output", size="8192", offset="0, 8", pattern="16, 512", multiport=1];
+Input21[opcode=Input, ref_name="input", size="8192", offset="0, 12", pattern="16, 512", multiport=1];
+FDIV22[opcode=FDIV];
+Output24[opcode=Output, ref_name="output", size="8192", offset="0, 12", pattern="16, 512", multiport=1];
+Input0 -> FDIV22[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input0 -> FDIV16[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input0 -> FDIV10[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input0 -> FDIV4[operand = 1, Width = 32 ,color = black, style = bold, label = "Op=1"];
+Input3 -> FDIV4[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+FDIV4 -> Output6[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input9 -> FDIV10[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+FDIV10 -> Output12[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input15 -> FDIV16[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+FDIV16 -> Output18[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+Input21 -> FDIV22[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+FDIV22 -> Output24[operand = 0, Width = 32 ,color = black, style = bold, label = "Op=0"];
+}

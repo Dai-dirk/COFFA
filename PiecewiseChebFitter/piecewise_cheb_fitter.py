@@ -428,7 +428,7 @@ time (second): {time}
         # first, evaluate w/o parity
         coeff = ChebSolver.chebfit_normCoeff((xmin, xmax), x_original, y_original, order, 0, config.bound, config.coef_norm, config.int_width, config.frac_width, max_iter, eps_abs, eps_rel)
         y_pred = ChebSolver.evaluate_cheby_norm(coeff, x_original, np.min(x_original), np.max(x_original))
-        print(y_pred.dtype)
+        # print(y_pred.dtype)
         max_bias = np.max(np.abs(y_original - y_pred))
         mean_bias = np.mean(y_original - y_pred)
         parity_usage_flag = 0

@@ -13,9 +13,7 @@ LNS_DIR = SCRIPT_DIR / "LNS"
 EXP_TAYLOR_TABLE = LNS_DIR / "exp_taylor_4_1616_16_10_table.pt"
 
 DEFAULT_OUTPUT_DIR = Path("/capsule/home/huangdaiwei/test_zgb/model/dp_llm_7b_base_exp16_swish16_taylor")
-DEFAULT_SOURCE_REPO = (
-    "/capsule/home/huangdaiwei/.cache/huggingface/hub/models--deepseek-ai--deepseek-llm-7b-base/snapshots/7683fea62db869066ddaff6a41d032262c490d4f"
-)
+DEFAULT_SOURCE_REPO = "deepseek-ai/deepseek-llm-7b-base"
 
 MODEL_MODULE_NAME = "modeling_dp_llm_swish16_exp16_taylor"
 MODEL_CLASS_NAME = "Swish16Exp16TaylorDpLlmForCausalLM"

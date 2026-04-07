@@ -18,6 +18,7 @@ EXP_TABLE = LNS_DIR / "exp_1616_C_table.pt"
 MODULES_DIR_NAME = "modules"
 MODEL_MODULE_NAME = "modeling_gpt2_gelu16"
 MODEL_CLASS_NAME = "GeLU16GPT2LMHeadModel"
+DEFAULT_SOURCE_REPO = "openai-community/gpt2-xl"
 
 
 def parse_args() -> argparse.Namespace:
@@ -32,7 +33,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--source-repo",
         type=str,
-        default="gpt2-xl",
+        default=DEFAULT_SOURCE_REPO,
         help="Base model identifier or local path. Defaults to gpt2-xl.",
     )
     parser.add_argument(

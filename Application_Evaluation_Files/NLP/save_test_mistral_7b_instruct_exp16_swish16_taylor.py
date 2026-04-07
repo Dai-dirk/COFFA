@@ -13,9 +13,7 @@ LNS_DIR = SCRIPT_DIR / "LNS"
 EXP_TAYLOR_TABLE = LNS_DIR / "exp_taylor_4_1616_16_10_table.pt"
 
 DEFAULT_OUTPUT_DIR = Path("/capsule/home/huangdaiwei/test_zgb/model/mistral_7b_instruct_exp16_swish16_taylor")
-DEFAULT_SOURCE_REPO = (
-    "/capsule/home/huangdaiwei/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/0d4b76e1efeb5eb6f6b5e757c79870472e04bd3a"
-)
+DEFAULT_SOURCE_REPO = "mistralai/Mistral-7B-Instruct-v0.3"
 
 MODEL_MODULE_NAME = "modeling_mistral_swish16_exp16_taylor"
 MODEL_CLASS_NAME = "Swish16Exp16TaylorMistralForCausalLM"

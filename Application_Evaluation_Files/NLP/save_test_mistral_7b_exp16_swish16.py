@@ -14,9 +14,7 @@ SWISH_TABLE = LNS_DIR / "swish_1616_C_table.pt"
 EXP_TABLE = LNS_DIR / "exp_1616_C_table.pt"
 
 DEFAULT_OUTPUT_DIR = Path("/capsule/home/huangdaiwei/test_zgb/model/mistral_7b_exp16_swish16")
-DEFAULT_SOURCE_REPO = (
-    "/capsule/home/huangdaiwei/.cache/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/27d67f1b5f57dc0953326b2601d68371d40ea8da"
-)
+DEFAULT_SOURCE_REPO = "mistralai/Mistral-7B-v0.1"
 
 MODEL_MODULE_NAME = "modeling_mistral_swish16_exp16"
 MODEL_CLASS_NAME = "Swish16Exp16MistralForCausalLM"
